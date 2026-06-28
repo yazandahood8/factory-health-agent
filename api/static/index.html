@@ -145,6 +145,41 @@
   .xt-llm.show .xt-prompt { max-height: 320px; overflow: auto; }
   .xt-llm .toggle { color: var(--accent); cursor: pointer; font-size: 11px; }
   .xt-route { color: var(--amber); }
+
+  /* live pipeline diagram */
+  .pipe { display: flex; align-items: stretch; gap: 0; flex-wrap: wrap; }
+  .pnode { flex: 1 1 0; min-width: 120px; border: 1px solid var(--line); border-radius: 12px;
+    background: var(--panel2); padding: 12px 12px; position: relative; transition: .25s;
+    opacity: .5; }
+  .pnode .pn-ic { font-size: 18px; }
+  .pnode .pn-title { font-size: 12.5px; font-weight: 600; margin-top: 4px; }
+  .pnode .pn-sub { font-size: 11px; color: var(--muted); margin-top: 3px; min-height: 14px; font-family: var(--mono); }
+  .pnode.active { opacity: 1; border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 22px rgba(79,156,255,.25);
+    animation: pulse 1.1s ease-in-out infinite; }
+  .pnode.done { opacity: 1; border-color: rgba(46,204,113,.5); }
+  .pnode.done .pn-ic::after { content: " ✓"; color: var(--green); }
+  .pnode.skip { opacity: .28; }
+  .pnode.esc-on { opacity: 1; border-color: var(--red); box-shadow: 0 0 0 1px var(--red), 0 0 22px rgba(255,87,87,.25); }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 1px var(--accent), 0 0 8px rgba(79,156,255,.15);} 50% { box-shadow: 0 0 0 1px var(--accent), 0 0 26px rgba(79,156,255,.45);} }
+  .arrow { display: flex; align-items: center; justify-content: center; color: var(--line); font-size: 18px;
+    padding: 0 6px; transition: .25s; }
+  .arrow.lit { color: var(--accent); }
+  .arrow.lit-red { color: var(--red); }
+  .pipe-alt { display: flex; align-items: center; gap: 6px; margin-top: 8px; padding-left: 4px; }
+  .pipe-alt .pnode { flex: 0 0 auto; min-width: 200px; }
+
+  .nowline { display: flex; align-items: center; gap: 10px; margin: 14px 0 6px; font-size: 13px; }
+  .nowline .spin2 { width: 13px; height: 13px; border: 2px solid var(--line); border-top-color: var(--accent);
+    border-radius: 50%; animation: spin .7s linear infinite; flex: 0 0 auto; }
+  .nowline.done .spin2 { display: none; }
+  .nowline .nowtxt b { color: var(--txt); }
+  .livelog { font-family: var(--mono); font-size: 11.5px; max-height: 168px; overflow: auto;
+    border: 1px solid var(--line); border-radius: 10px; background: #0c1320; padding: 8px 10px; }
+  .livelog .lg { padding: 3px 0; opacity: 0; animation: slidein .25s forwards; display: flex; gap: 8px; }
+  .livelog .lg .lt { color: var(--muted); flex: 0 0 52px; }
+  .livelog .lg .li { flex: 0 0 16px; }
+  .livelog .lg .agtag { color: var(--accent); }
+  #final:empty { display: none; }
 </style>
 </head>
 <body>
@@ -279,12 +314,93 @@ function applyPreset(kind) {
 
 document.querySelectorAll(".presets button").forEach(b => b.onclick = () => applyPreset(b.dataset.k));
 
+const NODES = [
+  ["analyzer", "🔎", "Analyzer"],
+  ["diagnostics", "🩺", "Diagnostics"],
+  ["guard", "🛡️", "Guard"],
+  ["recommender", "🧰", "Recommender"],
+];
+const cap = (s) => (s ? s[0].toUpperCase() + s.slice(1) : s);
+
+function buildDiagram() {
+  const node = (id, ic, t) =>
+    `<div class="pnode" id="node-${id}"><div class="pn-ic">${ic}</div>
+       <div class="pn-title">${t}</div><div class="pn-sub" id="sub-${id}"></div></div>`;
+  let row = "";
+  NODES.forEach((n, i) => {
+    row += node(...n);
+    if (i < NODES.length - 1) row += `<span class="arrow" id="arr-${i}">→</span>`;
+  });
+  return `
+    <div class="pipe">${row}</div>
+    <div class="pipe-alt"><span class="arrow" id="arr-esc">↳</span>
+      ${node("escalate", "🚨", "Escalate to human")}</div>
+    <div class="nowline" id="nowline"><span class="spin2"></span>
+      <span class="nowtxt" id="nowtxt">Starting pipeline…</span></div>
+    <div class="livelog" id="livelog"></div>
+    <div id="final"></div>`;
+}
+
+function setStatus(id, cls) {
+  const el = $("node-" + id); if (!el) return;
+  el.classList.remove("active", "skip", "done", "esc-on");
+  if (cls) el.classList.add(cls);
+}
+function nodeSub(id, txt) { const el = $("sub-" + id); if (el) el.textContent = txt; }
+function litArrow(idx, cls = "lit") { const a = $("arr-" + idx); if (a) a.classList.add(cls); }
+
+function explain(ev) {
+  const d = ev.detail || {};
+  if (ev.kind === "agent")
+    return [ev.detail.phase === "end" ? "✓" : "▶", `${cap(ev.agent)} ${ev.detail.phase === "end" ? "finished" : "started"}`];
+  if (ev.kind === "store")
+    return ["🗄️", `read ${ev.name} (tenant ${d.tenant_id}) → ${d.rows} rows`];
+  if (ev.kind === "rag")
+    return ["📚", `RAG · ${ev.name}: “${(d.query || "").slice(0, 38)}…” → ${(d.hits || []).length} docs`];
+  if (ev.kind === "llm")
+    return ["✨", `LLM · ${ev.name}/${d.model} → ${d.tokens} tok · $${Number(d.cost_usd || 0).toFixed(5)}`];
+  if (ev.kind === "route")
+    return ["🔀", `route · ${ev.name} → ${d.decision} (${d.reason})`];
+  if (ev.kind === "guard")
+    return ["🛡️", `groundedness ${(d.score * 100).toFixed(0)}% vs ${(d.threshold * 100).toFixed(0)}% → ${d.action}`];
+  return ["•", ev.name];
+}
+
+function applyEvent(ev) {
+  const [icon, text] = explain(ev);
+  // caption
+  const nt = $("nowtxt"); if (nt) nt.innerHTML = `<b>${esc(cap(ev.agent || "router"))}</b> — ${esc(text)}`;
+  // node states
+  if (ev.kind === "agent") {
+    if (ev.detail.phase === "end") setStatus(ev.agent, ev.agent === "escalate" ? "esc-on" : "done");
+    else setStatus(ev.agent, ev.agent === "escalate" ? "esc-on" : "active");
+  } else if (["store", "rag", "llm", "guard"].includes(ev.kind) && ev.agent && ev.agent !== "router") {
+    if (!$("node-" + ev.agent)?.classList.contains("done")) setStatus(ev.agent, ev.agent === "escalate" ? "esc-on" : "active");
+    nodeSub(ev.agent, ev.kind === "llm" ? `LLM ${ev.detail.model || ""}` :
+                      ev.kind === "rag" ? `RAG ${ev.name}` :
+                      ev.kind === "guard" ? `grounded ${(ev.detail.score * 100).toFixed(0)}%` : ev.name);
+  } else if (ev.kind === "route") {
+    const dec = ev.detail.decision;
+    if (ev.name === "after_analysis") { if (dec === "investigate") litArrow(0); else ["diagnostics","guard","recommender"].forEach(n=>setStatus(n,"skip")); }
+    if (ev.name === "after_diagnosis") { if (dec === "guard") litArrow(1); else { litArrow("esc","lit-red"); ["guard","recommender"].forEach(n=>setStatus(n,"skip")); } }
+    if (ev.name === "after_guard") { if (dec === "recommend") litArrow(2); else { litArrow("esc","lit-red"); setStatus("recommender","skip"); } }
+  }
+  // live log line
+  const log = $("livelog");
+  if (log) {
+    const line = document.createElement("div");
+    line.className = "lg";
+    line.innerHTML = `<span class="lt">${ev.t_ms}ms</span><span class="li">${icon}</span>
+      <span><span class="agtag">${esc(ev.agent || "router")}</span> ${esc(text)}</span>`;
+    log.appendChild(line); log.scrollTop = log.scrollHeight;
+  }
+}
+
 async function run() {
   if (!current) return;
   const btn = $("run"); btn.disabled = true; btn.textContent = "Analyzing…";
   const res = $("results");
-  res.innerHTML = `<div class="trace" id="trace"></div>`;
-  const trace = $("trace");
+  res.innerHTML = buildDiagram();
   const t0 = performance.now();
 
   const body = JSON.stringify({
@@ -297,39 +413,67 @@ async function run() {
     },
   });
 
+  const buf = []; let result = null, errored = false, streamDone = false;
+
+  // Paced animator: render buffered events at a readable cadence so the pipeline
+  // is watchable step-by-step, catching up if a backlog builds.
+  function pump() {
+    if (buf.length) {
+      applyEvent(buf.shift());
+      const delay = buf.length > 6 ? 45 : 150;
+      setTimeout(pump, delay);
+    } else if (result) {
+      finalize(result);
+    } else if (errored || streamDone) {
+      // nothing more coming
+    } else {
+      setTimeout(pump, 70);
+    }
+  }
+  function finalize(data) {
+    const nl = $("nowline"); if (nl) nl.classList.add("done");
+    const nt = $("nowtxt");
+    if (nt) nt.innerHTML = data.escalated
+      ? `<b>Escalated</b> — routed to a human expert`
+      : `<b>Done</b> — ${esc(data.severity)} · ${esc((data.diagnosis||{}).root_cause||"no fault")}`;
+    if (data.escalated) setStatus("escalate", "esc-on");
+    // Any node still "running" at the end (e.g. Guard, which has no end marker)
+    // settles to done; skipped nodes stay dimmed.
+    NODES.forEach(([id]) => {
+      const el = $("node-" + id);
+      if (el && el.classList.contains("active")) setStatus(id, "done");
+    });
+    renderResult($("final"), data, Math.round(performance.now() - t0));
+    btn.disabled = false; btn.textContent = "Run Analysis";
+  }
+
+  pump();
   try {
     const r = await authed("/v1/analyze/stream", {
       method: "POST", headers: { "Content-Type": "application/json", "X-Tenant-ID": "acme" }, body,
     });
     if (!r.ok) throw new Error("HTTP " + r.status + " — " + (await r.text()));
-
-    const reader = r.body.getReader(); const dec = new TextDecoder(); let buf = "";
+    const reader = r.body.getReader(); const dec = new TextDecoder(); let sbuf = "";
     while (true) {
       const { value, done } = await reader.read(); if (done) break;
-      buf += dec.decode(value, { stream: true });
-      const events = buf.split("\n\n"); buf = events.pop();
-      for (const ev of events) {
+      sbuf += dec.decode(value, { stream: true });
+      const parts = sbuf.split("\n\n"); sbuf = parts.pop();
+      for (const ev of parts) {
         const type = (ev.match(/event:\s*(.*)/) || [])[1];
         const dataLine = (ev.match(/data:\s*([\s\S]*)/) || [])[1];
         if (!dataLine) continue;
         const data = JSON.parse(dataLine);
-        if (type === "step") addStep(trace, data.message);
-        else if (type === "result") renderResult(res, data, Math.round(performance.now() - t0));
-        else if (type === "error") res.innerHTML = `<div class="err">⚠ ${esc(data.detail)}</div>`;
+        if (type === "trace") buf.push(data);
+        else if (type === "result") result = data;
+        else if (type === "error") { errored = true; $("results").innerHTML = `<div class="err">⚠ ${esc(data.detail)}</div>`; btn.disabled = false; btn.textContent = "Run Analysis"; }
       }
     }
+    streamDone = true;
   } catch (e) {
-    res.innerHTML = `<div class="err">⚠ ${esc(e.message)}</div>`;
-  } finally {
+    errored = true;
+    $("results").innerHTML = `<div class="err">⚠ ${esc(e.message)}</div>`;
     btn.disabled = false; btn.textContent = "Run Analysis";
   }
-}
-
-function addStep(trace, msg) {
-  const d = document.createElement("div");
-  d.className = "step";
-  d.innerHTML = `<span class="dot ok"></span><b>${esc(msg.split(":")[0])}</b> ${esc(msg.split(":").slice(1).join(":"))}`;
-  trace.appendChild(d);
 }
 
 function bar(conf) {

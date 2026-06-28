@@ -27,27 +27,34 @@ class TraceEvent:
 
 
 class TraceRecorder:
-    def __init__(self) -> None:
+    def __init__(self, sink: Any = None) -> None:
         self._events: list[TraceEvent] = []
         self._t0 = time.perf_counter()
         self._agent = ""
         self._seq = 0
+        # Optional callback(dict) fired the instant an event is recorded — used
+        # to stream the pipeline live to the UI.
+        self._sink = sink
 
     def set_agent(self, name: str) -> None:
         self._agent = name
 
     def add(self, kind: str, name: str, **detail: Any) -> None:
         self._seq += 1
-        self._events.append(
-            TraceEvent(
-                seq=self._seq,
-                t_ms=round((time.perf_counter() - self._t0) * 1000, 1),
-                kind=kind,
-                name=name,
-                agent=self._agent,
-                detail=detail,
-            )
+        event = TraceEvent(
+            seq=self._seq,
+            t_ms=round((time.perf_counter() - self._t0) * 1000, 1),
+            kind=kind,
+            name=name,
+            agent=self._agent,
+            detail=detail,
         )
+        self._events.append(event)
+        if self._sink is not None:
+            try:
+                self._sink(asdict(event))
+            except Exception:  # never let observability break the pipeline
+                pass
 
     @property
     def events(self) -> list[TraceEvent]:

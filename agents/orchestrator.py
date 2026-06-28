@@ -207,8 +207,14 @@ class Pipeline:
         self.services = services or build_services()
         self.graph = build_graph(self.services)
 
-    def run(self, machine_id: str, tenant: Tenant, sensor_data: Optional[dict] = None) -> PipelineState:
-        recorder = TraceRecorder()
+    def run(
+        self,
+        machine_id: str,
+        tenant: Tenant,
+        sensor_data: Optional[dict] = None,
+        recorder: Optional[TraceRecorder] = None,
+    ) -> PipelineState:
+        recorder = recorder or TraceRecorder()
         initial: PipelineState = {
             "machine_id": machine_id,
             "sensor_data": sensor_data or {},

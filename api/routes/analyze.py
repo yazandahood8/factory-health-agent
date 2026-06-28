@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import json
+import queue
+import threading
 
 from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
@@ -9,6 +11,7 @@ from fastapi.responses import StreamingResponse
 from api.schemas import AnalyzeRequest, AnalyzeResponse
 from api.serialization import to_jsonable
 from sdk.exceptions import BudgetExceededException
+from sdk.trace import TraceRecorder
 
 router = APIRouter(prefix="/v1", tags=["analyze"])
 
@@ -55,17 +58,35 @@ async def analyze(request: Request, body: AnalyzeRequest):
 
 @router.post("/analyze/stream")
 async def analyze_stream(request: Request, body: AnalyzeRequest):
-    """SSE stream of pipeline progress then the final result."""
+    """Server-Sent Events: emits each pipeline step **as it happens**, then the
+    final result. The pipeline runs in a worker thread; the trace recorder pushes
+    every event onto a queue that this generator drains in real time.
+    """
+    pipeline = request.app.state.pipeline
+    tenant = request.state.tenant
+    sensor = body.sensor_data.model_dump(exclude_none=True) if body.sensor_data else None
+
+    q: "queue.Queue" = queue.Queue()
+    recorder = TraceRecorder(sink=lambda ev: q.put(("trace", ev)))
+
+    def worker():
+        try:
+            state = pipeline.run(body.machine_id, tenant, sensor, recorder=recorder)
+            q.put(("result", _to_response(state).model_dump()))
+        except BudgetExceededException as exc:
+            q.put(("error", {"detail": str(exc)}))
+        except Exception as exc:  # surface unexpected failures to the client
+            q.put(("error", {"detail": f"{type(exc).__name__}: {exc}"}))
+        finally:
+            q.put(None)  # sentinel: stream complete
 
     def event_gen():
-        try:
-            state = _run(request, body)
-        except BudgetExceededException as exc:
-            yield f"event: error\ndata: {json.dumps({'detail': str(exc)})}\n\n"
-            return
-        for msg in state.get("messages", []):
-            yield f"event: step\ndata: {json.dumps({'message': msg})}\n\n"
-        final = _to_response(state).model_dump()
-        yield f"event: result\ndata: {json.dumps(final)}\n\n"
+        threading.Thread(target=worker, daemon=True).start()
+        while True:
+            item = q.get()
+            if item is None:
+                break
+            kind, data = item
+            yield f"event: {kind}\ndata: {json.dumps(data)}\n\n"
 
     return StreamingResponse(event_gen(), media_type="text/event-stream")
