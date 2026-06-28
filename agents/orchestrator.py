@@ -29,6 +29,7 @@ from data.seed_mongodb import DEMO_TENANTS
 from sdk.agent_sdk import AgentSDK, build_sdk
 from sdk.config import Settings
 from sdk.models import PipelineState, Severity, Tenant
+from sdk.trace import TraceRecorder
 
 # Re-export so existing callers (api, tests) need no changes.
 Services = AgentSDK
@@ -55,9 +56,13 @@ def _machine_type(ctx: AgentContext, machine_id: str) -> str:
 
 def _make_nodes(services: Services):
     def analyzer_node(state: PipelineState) -> dict:
-        ctx = services.context_for(state["tenant"])
-        agent = AnalyzerAgent(ctx)
-        report, resp = agent.run(state["machine_id"], state.get("sensor_data"))
+        rec: TraceRecorder = state["recorder"]
+        rec.set_agent("analyzer")
+        rec.add("agent", "analyzer", phase="start", input=state.get("sensor_data"))
+        ctx = services.instrumented_context_for(state["tenant"], rec)
+        report, resp = AnalyzerAgent(ctx).run(state["machine_id"], state.get("sensor_data"))
+        rec.add("agent", "analyzer", phase="end",
+                severity=report.severity.value, confidence=report.confidence)
         return {
             "anomaly_report": report,
             "total_tokens": state.get("total_tokens", 0) + resp.tokens,
@@ -65,34 +70,48 @@ def _make_nodes(services: Services):
         }
 
     def diagnostics_node(state: PipelineState) -> dict:
-        ctx = services.context_for(state["tenant"])
-        agent = DiagnosticsAgent(ctx)
+        rec: TraceRecorder = state["recorder"]
+        rec.set_agent("diagnostics")
+        rec.add("agent", "diagnostics", phase="start")
+        ctx = services.instrumented_context_for(state["tenant"], rec)
         mt = _machine_type(ctx, state["machine_id"])
-        diagnosis, resp = agent.run(state["anomaly_report"], mt)
+        diagnosis, resp = DiagnosticsAgent(ctx).run(state["anomaly_report"], mt)
+        rec.add("agent", "diagnostics", phase="end",
+                root_cause=diagnosis.root_cause, confidence=diagnosis.confidence)
         return {
             "diagnosis": diagnosis,
+            "diag_response": resp,
+            "machine_type": mt,
             "total_tokens": state.get("total_tokens", 0) + resp.tokens,
             "messages": state.get("messages", [])
             + [f"diagnostics: {diagnosis.root_cause} ({diagnosis.confidence})"],
         }
 
     def guard_node(state: PipelineState) -> dict:
-        ctx = services.context_for(state["tenant"])
-        agent = DiagnosticsAgent(ctx)
-        mt = _machine_type(ctx, state["machine_id"])
-        _, resp = agent.run(state["anomaly_report"], mt)
+        # Reuses the diagnostics response (no re-run) and scores groundedness
+        # against the evidence it cited.
+        rec: TraceRecorder = state["recorder"]
+        rec.set_agent("guard")
+        ctx = services.instrumented_context_for(state["tenant"], rec)
+        mt = state.get("machine_type") or _machine_type(ctx, state["machine_id"])
+        resp = state["diag_response"]
         context = _context_from_sources(ctx, state, mt)
         validated = services.guard.validate(resp, context)
+        rec.add("guard", "groundedness", score=round(validated.groundedness, 3),
+                threshold=services.guard.threshold, action=validated.action)
         return {
             "validated_response": validated,
             "messages": state.get("messages", []) + [f"guard: {validated.action}"],
         }
 
     def recommender_node(state: PipelineState) -> dict:
-        ctx = services.context_for(state["tenant"])
-        agent = RecommenderAgent(ctx)
+        rec: TraceRecorder = state["recorder"]
+        rec.set_agent("recommender")
+        rec.add("agent", "recommender", phase="start")
+        ctx = services.instrumented_context_for(state["tenant"], rec)
         severity = state["anomaly_report"].severity
-        plan, resp = agent.run(state["diagnosis"], severity)
+        plan, resp = RecommenderAgent(ctx).run(state["diagnosis"], severity)
+        rec.add("agent", "recommender", phase="end", urgency=plan.urgency.value)
         return {
             "action_plan": plan,
             "total_tokens": state.get("total_tokens", 0) + resp.tokens,
@@ -101,6 +120,9 @@ def _make_nodes(services: Services):
         }
 
     def escalate_node(state: PipelineState) -> dict:
+        rec: TraceRecorder = state["recorder"]
+        rec.set_agent("escalate")
+        rec.add("agent", "escalate", phase="end", action="ESCALATE_TO_HUMAN")
         return {
             "escalated": True,
             "total_cost_usd": services.llm.budget_manager.current_spend(state["tenant"]),
@@ -122,17 +144,31 @@ def _context_from_sources(ctx: AgentContext, state: PipelineState, machine_type:
 # --------------------------------------------------------------------------
 # Routing
 # --------------------------------------------------------------------------
+def _route(state: PipelineState, at: str, decision: str, reason: str) -> str:
+    rec = state.get("recorder")
+    if rec is not None:
+        rec.set_agent("router")
+        rec.add("route", at, decision=decision, reason=reason)
+    return decision
+
+
 def route_after_analysis(state: PipelineState) -> str:
-    return "normal" if state["anomaly_report"].severity is Severity.NORMAL else "investigate"
+    sev = state["anomaly_report"].severity
+    decision = "normal" if sev is Severity.NORMAL else "investigate"
+    return _route(state, "after_analysis", decision, f"severity={sev.value}")
 
 
 def route_after_diagnosis(state: PipelineState) -> str:
     d = state["diagnosis"]
-    return "escalate" if (d.escalate or d.confidence < CONFIDENCE_FLOOR) else "guard"
+    decision = "escalate" if (d.escalate or d.confidence < CONFIDENCE_FLOOR) else "guard"
+    return _route(state, "after_diagnosis", decision,
+                  f"confidence={d.confidence} vs floor {CONFIDENCE_FLOOR}")
 
 
 def route_after_guard(state: PipelineState) -> str:
-    return "recommend" if state["validated_response"].action == "RETURN" else "escalate"
+    v = state["validated_response"]
+    decision = "recommend" if v.action == "RETURN" else "escalate"
+    return _route(state, "after_guard", decision, f"groundedness={round(v.groundedness, 3)}")
 
 
 # --------------------------------------------------------------------------
@@ -172,6 +208,7 @@ class Pipeline:
         self.graph = build_graph(self.services)
 
     def run(self, machine_id: str, tenant: Tenant, sensor_data: Optional[dict] = None) -> PipelineState:
+        recorder = TraceRecorder()
         initial: PipelineState = {
             "machine_id": machine_id,
             "sensor_data": sensor_data or {},
@@ -181,5 +218,9 @@ class Pipeline:
             "total_tokens": 0,
             "total_cost_usd": 0.0,
             "messages": [],
+            "recorder": recorder,
         }
-        return self.graph.invoke(initial)
+        final = self.graph.invoke(initial)
+        # Ensure the (in-place mutated) recorder is present on the returned state.
+        final["recorder"] = recorder
+        return final

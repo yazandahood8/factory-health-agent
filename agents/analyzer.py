@@ -50,6 +50,10 @@ class AnalyzerAgent:
 
     # ---- core ------------------------------------------------------------
     def analyze(self, machine_id: str, sensor_data: Optional[dict] = None) -> AnomalyReport:
+        """Structured-only entry point (delegates to :meth:`run`)."""
+        return self.run(machine_id, sensor_data)[0]
+
+    def _analyze(self, machine_id: str, sensor_data: Optional[dict] = None) -> AnomalyReport:
         specs = self.get_machine_specs(machine_id)
         history = self.query_sensor_history(machine_id)
         reading = sensor_data or (history[-1] if history else {})
@@ -136,11 +140,11 @@ class AnalyzerAgent:
         return result.text
 
     def run(self, machine_id: str, sensor_data: Optional[dict] = None) -> tuple[AnomalyReport, AgentResponse]:
-        """Returns the structured report plus a guard-checkable AgentResponse."""
-        report = self.analyze(machine_id, sensor_data)
-        standards = self.retrieve_vibration_standards(
-            (self.get_machine_specs(machine_id) or {}).get("machine_type", "")
-        )
+        """Returns the structured report plus a guard-checkable AgentResponse.
+
+        Retrieves exactly once; :meth:`analyze` delegates here.
+        """
+        report = self._analyze(machine_id, sensor_data)
         response = AgentResponse(
             text=report.details,
             structured=report.__dict__,

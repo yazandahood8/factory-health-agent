@@ -22,6 +22,10 @@ def _run(request: Request, body: AnalyzeRequest):
 
 def _to_response(state) -> AnalyzeResponse:
     report = state.get("anomaly_report")
+    recorder = state.get("recorder")
+    execution_trace = recorder.snapshot() if recorder is not None else []
+    # Per-request cost from this run's LLM calls (not cumulative tenant spend).
+    request_cost = recorder.llm_cost() if recorder is not None else state.get("total_cost_usd", 0.0)
     return AnalyzeResponse(
         machine_id=state["machine_id"],
         trace_id=state["trace_id"],
@@ -32,8 +36,9 @@ def _to_response(state) -> AnalyzeResponse:
         action_plan=to_jsonable(state.get("action_plan")),
         validated_response=to_jsonable(state.get("validated_response")),
         total_tokens=state.get("total_tokens", 0),
-        total_cost_usd=round(state.get("total_cost_usd", 0.0), 6),
+        total_cost_usd=round(request_cost, 6),
         trace=state.get("messages", []),
+        execution_trace=execution_trace,
     )
 
 

@@ -30,6 +30,7 @@ class LLMResult:
     tokens: int
     cost_usd: float
     provider: str
+    model: str = ""
 
 
 class RateLimitError(Exception):
@@ -76,7 +77,9 @@ class MockProvider:
             f"(ref {digest})"
         )
         pt, ct = _estimate_tokens(prompt + system), _estimate_tokens(text)
-        return LLMResult(text=text, tokens=pt + ct, cost_usd=0.0, provider=self.name)
+        return LLMResult(
+            text=text, tokens=pt + ct, cost_usd=0.0, provider=self.name, model="mock"
+        )
 
 
 class AzureOpenAIProvider:
@@ -117,6 +120,7 @@ class AzureOpenAIProvider:
             tokens=pt + ct,
             cost_usd=_cost(pt, ct, self.IN_RATE, self.OUT_RATE),
             provider=self.name,
+            model=self._settings.azure_openai_deployment,
         )
 
 
@@ -153,6 +157,7 @@ class GeminiProvider:
             tokens=pt + ct,
             cost_usd=_cost(pt, ct, self.IN_RATE, self.OUT_RATE),
             provider=self.name,
+            model=self._settings.gemini_model,
         )
 
 

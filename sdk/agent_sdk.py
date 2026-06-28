@@ -49,6 +49,20 @@ class AgentSDK:
             guard=self.guard,
         )
 
+    def instrumented_context_for(self, tenant: Tenant, recorder):
+        """Like :meth:`context_for`, but every store/RAG/LLM call is recorded."""
+        from agents.base import AgentContext
+        from sdk.trace import TracedLLM, TracedRAG, TracedStore
+
+        return AgentContext(
+            tenant=tenant,
+            store=TracedStore(self.store, recorder),
+            rag=TracedRAG(self.rag, recorder),
+            llm=TracedLLM(self.llm, recorder),
+            guard=self.guard,
+            recorder=recorder,
+        )
+
 
 def build_sdk(settings: Optional[Settings] = None) -> AgentSDK:
     """Construct a fully wired :class:`AgentSDK` from the current configuration."""

@@ -46,27 +46,8 @@ class DiagnosticsAgent:
 
     # ---- core ------------------------------------------------------------
     def diagnose(self, report: AnomalyReport, machine_type: str = "") -> Diagnosis:
-        symptoms = f"{report.anomaly_type} {report.details}"
-        cases = self.search_failure_history(machine_type, symptoms)
-        manual = self.query_machine_manual(machine_type, report.anomaly_type)
-
-        root_cause, top_score = self._infer_root_cause(cases)
-        evidence_sources = cases.sources + manual.sources
-
-        # Confidence blends retrieval quality, evidence count, and upstream severity.
-        confidence = self._confidence(top_score, len(cases.documents), report)
-        escalate = confidence < CONFIDENCE_FLOOR
-
-        # LLM narrative is generated but the structured fields above are authoritative.
-        self._narrate(report, root_cause, cases, manual)
-
-        return Diagnosis(
-            root_cause=root_cause,
-            confidence=round(confidence, 2),
-            evidence=evidence_sources,
-            escalate=escalate,
-            rul_days=self.calculate_rul(report.severity),
-        )
+        """Structured-only entry point (delegates to :meth:`run`)."""
+        return self.run(report, machine_type)[0]
 
     def _infer_root_cause(self, cases) -> tuple[str, float]:
         if not cases.documents:
@@ -102,16 +83,29 @@ class DiagnosticsAgent:
         ).text
 
     def run(self, report: AnomalyReport, machine_type: str = "") -> tuple[Diagnosis, AgentResponse]:
+        """Does all retrieval/LLM work once; :meth:`diagnose` delegates here."""
         symptoms = f"{report.anomaly_type} {report.details}"
         cases = self.search_failure_history(machine_type, symptoms)
         manual = self.query_machine_manual(machine_type, report.anomaly_type)
-        diagnosis = self.diagnose(report, machine_type)
-        text = (
-            f"Root cause: {diagnosis.root_cause} "
-            f"(confidence {diagnosis.confidence}, RUL ~{diagnosis.rul_days} days)."
+
+        root_cause, top_score = self._infer_root_cause(cases)
+        confidence = self._confidence(top_score, len(cases.documents), report)
+        # LLM narrative (grounded); captured in the trace. The guard validates the
+        # deterministic summary below so groundedness stays stable offline.
+        self._narrate(report, root_cause, cases, manual)
+
+        diagnosis = Diagnosis(
+            root_cause=root_cause,
+            confidence=round(confidence, 2),
+            evidence=cases.sources + manual.sources,
+            escalate=confidence < CONFIDENCE_FLOOR,
+            rul_days=self.calculate_rul(report.severity),
         )
         response = AgentResponse(
-            text=text,
+            text=(
+                f"Root cause: {root_cause} "
+                f"(confidence {diagnosis.confidence}, RUL ~{diagnosis.rul_days} days)."
+            ),
             structured=diagnosis.__dict__,
             sources=cases.sources + manual.sources,
         )

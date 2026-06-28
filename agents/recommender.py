@@ -60,22 +60,8 @@ class RecommenderAgent:
 
     # ---- core ------------------------------------------------------------
     def recommend(self, diagnosis: Diagnosis, severity: Severity) -> ActionPlan:
-        fc = self._matching_failure_case(diagnosis.root_cause)
-        parts = fc.get("parts", [])
-        downtime = self.estimate_downtime(fc)
-        urgency = self.classify_urgency(diagnosis.confidence, severity)
-        procedures = self.get_maintenance_procedures(diagnosis.root_cause)
-
-        actions = self._build_actions(diagnosis, urgency, fc, procedures)
-        # LLM narrative (grounded); structured plan above stays authoritative.
-        self._narrate(diagnosis, urgency, procedures)
-
-        return ActionPlan(
-            actions=actions,
-            urgency=urgency,
-            estimated_downtime_hours=downtime,
-            parts_needed=parts,
-        )
+        """Structured-only entry point (delegates to :meth:`run`)."""
+        return self.run(diagnosis, severity)[0]
 
     def _build_actions(self, diagnosis, urgency, failure_case, procedures) -> list[str]:
         actions: list[str] = []
@@ -107,8 +93,20 @@ class RecommenderAgent:
         ).text
 
     def run(self, diagnosis: Diagnosis, severity: Severity) -> tuple[ActionPlan, AgentResponse]:
-        plan = self.recommend(diagnosis, severity)
+        """Does all retrieval/LLM work once; :meth:`recommend` delegates here."""
+        fc = self._matching_failure_case(diagnosis.root_cause)
+        urgency = self.classify_urgency(diagnosis.confidence, severity)
         procedures = self.get_maintenance_procedures(diagnosis.root_cause)
+        actions = self._build_actions(diagnosis, urgency, fc, procedures)
+        # LLM narrative (grounded); captured in the trace. Structured plan is authoritative.
+        self._narrate(diagnosis, urgency, procedures)
+
+        plan = ActionPlan(
+            actions=actions,
+            urgency=urgency,
+            estimated_downtime_hours=self.estimate_downtime(fc),
+            parts_needed=fc.get("parts", []),
+        )
         text = (
             f"Urgency {plan.urgency.value}. Actions: " + " ".join(plan.actions) +
             f" Estimated downtime {plan.estimated_downtime_hours}h."

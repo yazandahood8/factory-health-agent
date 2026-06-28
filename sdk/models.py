@@ -113,3 +113,7 @@ class PipelineState(TypedDict, total=False):
     total_tokens: int
     total_cost_usd: float
     messages: list[str]
+    # Internal plumbing (not part of the public response)
+    machine_type: str
+    diag_response: Any
+    recorder: Any

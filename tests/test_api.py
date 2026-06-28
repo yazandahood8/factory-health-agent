@@ -99,3 +99,20 @@ def test_machines_endpoint_lists_catalog(client, token):
 def test_machines_requires_auth(client):
     r = client.get("/v1/machines")
     assert r.status_code == 401
+
+
+def test_analyze_includes_execution_trace(client, token):
+    r = client.post(
+        "/v1/analyze",
+        json={"machine_id": "pump_001", "sensor_data": {"vibration_mm_s": 6.5, "temperature_c": 95}},
+        headers={"Authorization": f"Bearer {token}", "X-Tenant-ID": "acme"},
+    )
+    assert r.status_code == 200
+    trace = r.json()["execution_trace"]
+    kinds = {e["kind"] for e in trace}
+    # The full pipeline should expose agent, RAG, LLM, store, routing and guard steps.
+    assert {"agent", "rag", "llm", "store", "route", "guard"} <= kinds
+    rag = next(e for e in trace if e["kind"] == "rag")
+    assert "hits" in rag["detail"]  # RAG events carry retrieved docs + scores
+    llm = next(e for e in trace if e["kind"] == "llm")
+    assert "model" in llm["detail"] and "tokens" in llm["detail"]

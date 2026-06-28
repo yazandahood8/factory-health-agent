@@ -30,6 +30,7 @@ class AnalyzeResponse(BaseModel):
     total_tokens: int = 0
     total_cost_usd: float = 0.0
     trace: list[str] = Field(default_factory=list)
+    execution_trace: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class HealthResponse(BaseModel):

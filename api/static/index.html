@@ -114,6 +114,37 @@
   .narr { font-size: 13px; color: var(--txt); line-height: 1.6; margin-top: 6px;
     background: var(--panel2); border-left: 2px solid var(--accent2); padding: 10px 12px; border-radius: 0 8px 8px 0; }
   .err { color: var(--red); font-size: 13px; }
+
+  /* execution trace */
+  details.xtrace { border: 1px solid var(--line); border-radius: 12px; background: var(--panel2); margin-top: 4px; }
+  details.xtrace > summary { cursor: pointer; padding: 12px 16px; font-size: 13px; color: var(--txt);
+    list-style: none; display: flex; align-items: center; gap: 10px; user-select: none; }
+  details.xtrace > summary::-webkit-details-marker { display: none; }
+  details.xtrace > summary .caret { color: var(--muted); transition: transform .2s; }
+  details.xtrace[open] > summary .caret { transform: rotate(90deg); }
+  .xt-legend { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+  .xt-body { padding: 4px 14px 14px; }
+  .xt-agent { display: flex; align-items: center; gap: 8px; margin: 14px 0 6px; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+  .xt-agent::before { content: ""; flex: 0 0 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .xt-ev { display: grid; grid-template-columns: 56px 20px 1fr; gap: 8px; align-items: start;
+    padding: 5px 0; border-left: 1px solid var(--line); margin-left: 3px; padding-left: 14px; }
+  .xt-t { font-family: var(--mono); font-size: 10.5px; color: var(--muted); padding-top: 2px; }
+  .xt-ic { font-size: 13px; }
+  .xt-main { font-size: 12.5px; color: var(--txt); }
+  .xt-main .lbl { color: var(--muted); }
+  .xt-tag { font-family: var(--mono); font-size: 11px; }
+  .xt-pill { display: inline-block; font-family: var(--mono); font-size: 10.5px; color: var(--muted);
+    background: #0c1320; border: 1px solid var(--line); border-radius: 6px; padding: 1px 7px; margin: 0 2px 2px 0; }
+  .xt-hit { font-size: 11.5px; color: var(--muted); margin: 4px 0 0; padding-left: 4px; }
+  .xt-hit .src { color: var(--accent); font-family: var(--mono); }
+  .xt-hit .score { color: var(--green); font-family: var(--mono); }
+  .xt-prompt { font-family: var(--mono); font-size: 11px; color: var(--muted); background: #0c1320;
+    border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; margin-top: 5px; white-space: pre-wrap;
+    max-height: 0; overflow: hidden; transition: max-height .25s; }
+  .xt-llm.show .xt-prompt { max-height: 320px; overflow: auto; }
+  .xt-llm .toggle { color: var(--accent); cursor: pointer; font-size: 11px; }
+  .xt-route { color: var(--amber); }
 </style>
 </head>
 <body>
@@ -347,8 +378,78 @@ function renderResult(res, d, latency) {
     ${vr && vr.groundedness != null ? `<span>groundedness ${(vr.groundedness*100).toFixed(0)}%</span>` : ""}
   </div>`;
 
+  html += renderTrace(d.execution_trace || []);
   res.innerHTML = html;
 }
+
+const XT_ICON = { agent: "🧠", store: "🗄️", rag: "📚", llm: "✨", route: "🔀", guard: "🛡️" };
+
+function renderTrace(events) {
+  if (!events.length) return "";
+  const counts = events.reduce((a, e) => (a[e.kind] = (a[e.kind]||0)+1, a), {});
+  const legend = `${counts.agent||0} agents · ${counts.store||0} store · ${counts.rag||0} RAG · ${counts.llm||0} LLM · ${counts.route||0} routes`;
+
+  let body = "", lastAgent = null;
+  for (const e of events) {
+    // Agent start markers become section headers; skip the matching 'end' marker.
+    if (e.kind === "agent") {
+      if (e.detail.phase === "start" || e.agent !== lastAgent) {
+        if (e.detail.phase !== "end") { body += `<div class="xt-agent">${esc(e.agent)}</div>`; lastAgent = e.agent; }
+      }
+      if (e.detail.phase === "start") continue;
+      if (e.detail.phase === "end") continue;
+    }
+    body += renderEvent(e);
+  }
+  return `<details class="xtrace" open>
+    <summary><span class="caret">▶</span><b>Execution trace</b>
+      <span class="xt-legend">${esc(legend)}</span></summary>
+    <div class="xt-body">${body}</div></details>`;
+}
+
+function renderEvent(e) {
+  const d = e.detail || {};
+  const ic = XT_ICON[e.kind] || "•";
+  let main = "";
+  if (e.kind === "store") {
+    main = `<span class="lbl">store.query</span> <span class="xt-tag">${esc(e.name)}</span>
+      <span class="lbl">→ ${esc(d.rows)} rows · tenant=</span><span class="xt-tag">${esc(d.tenant_id)}</span>`;
+  } else if (e.kind === "rag") {
+    main = `<span class="lbl">RAG retrieve</span> <span class="xt-tag">${esc(e.name)}</span>
+      <span class="lbl">k=${esc(d.k)} · "${esc((d.query||"").slice(0,70))}"</span>` +
+      (d.hits||[]).map(h => `<div class="xt-hit">↳ <span class="src">${esc(h.source)}</span>
+        <span class="score">${(h.score*100).toFixed(0)}%</span> — ${esc(h.snippet)}…</div>`).join("");
+  } else if (e.kind === "llm") {
+    const id = "p" + e.seq;
+    main = `<span class="lbl">LLM call</span> <span class="xt-tag">${esc(e.name)}/${esc(d.model)}</span>
+      <span class="xt-pill">${esc(d.tokens)} tok</span><span class="xt-pill">$${Number(d.cost_usd||0).toFixed(5)}</span>
+      <span class="xt-pill">${esc(d.latency_ms)}ms</span>
+      <span class="toggle" data-toggle="${id}">show prompt ▾</span>
+      <div class="xt-prompt" id="${id}"><b>system/prompt:</b>\n${esc(d.prompt_preview)}…\n\n<b>response:</b>\n${esc(d.response_preview)}…</div>`;
+    return `<div class="xt-ev xt-llm" id="row${id}"><span class="xt-t">${e.t_ms}ms</span>
+      <span class="xt-ic">${ic}</span><span class="xt-main">${main}</span></div>`;
+  } else if (e.kind === "route") {
+    main = `<span class="xt-route">LangGraph route</span> <span class="lbl">${esc(e.name)} →</span>
+      <span class="xt-tag">${esc(d.decision)}</span> <span class="lbl">(${esc(d.reason)})</span>`;
+  } else if (e.kind === "guard") {
+    main = `<span class="lbl">Hallucination guard</span>
+      <span class="xt-pill">groundedness ${(d.score*100).toFixed(0)}%</span>
+      <span class="lbl">threshold ${(d.threshold*100).toFixed(0)}% →</span> <span class="xt-tag">${esc(d.action)}</span>`;
+  } else {
+    main = `<span class="xt-tag">${esc(e.name)}</span>`;
+  }
+  return `<div class="xt-ev"><span class="xt-t">${e.t_ms}ms</span>
+    <span class="xt-ic">${ic}</span><span class="xt-main">${main}</span></div>`;
+}
+
+// Toggle LLM prompt/response previews (event delegation).
+document.addEventListener("click", (ev) => {
+  const t = ev.target.closest("[data-toggle]");
+  if (!t) return;
+  const row = document.getElementById("row" + t.dataset.toggle);
+  if (row) { row.classList.toggle("show");
+    t.textContent = row.classList.contains("show") ? "hide prompt ▴" : "show prompt ▾"; }
+});
 
 $("run").onclick = run;
 
