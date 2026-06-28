@@ -31,6 +31,7 @@ from sdk.config import Settings, get_settings
 from sdk.hallucination_guard import HallucinationGuard
 from sdk.llm_router import LLMRouter
 from sdk.models import PipelineState, Severity, Tenant
+from sdk.observability import enable_tracing
 from sdk.rag_engine import RAGEngine
 from sdk.tenant_store import TenantIsolatedStore
 
@@ -53,6 +54,7 @@ class Services:
 
 def build_services(settings: Optional[Settings] = None, seed: bool = True) -> Services:
     settings = settings or get_settings()
+    enable_tracing(settings)  # turns on LangSmith if configured (no-op otherwise)
     store = TenantIsolatedStore(settings)
     rag = RAGEngine(settings)
     llm = LLMRouter(settings)

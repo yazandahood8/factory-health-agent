@@ -88,6 +88,28 @@ docker compose up --build
 
 ---
 
+## Deploy
+
+A [`render.yaml`](render.yaml) blueprint is included. To get a live URL:
+
+1. Push to GitHub (done).
+2. On [Render](https://render.com): **New → Blueprint**, point it at this repo.
+3. Set `GEMINI_API_KEY` in the dashboard (marked `sync:false`); `JWT_SECRET` is
+   auto-generated. Render builds the `Dockerfile` and exposes `/v1/health`.
+
+With no managed databases attached the app uses its in-memory fallbacks
+(ephemeral but fully functional). Attach Render Mongo/Redis and set `MONGODB_URI`
+/ `REDIS_URL` for durable state. The `Dockerfile` honors `$PORT`, so the same
+image runs on Railway / Fly / Cloud Run unchanged.
+
+### Observability (LangSmith)
+
+Set `LANGCHAIN_TRACING_V2=true` and `LANGCHAIN_API_KEY` (locally in `.env` or in
+your host's env). `sdk/observability.py` propagates these so every LLM and graph
+call is traced; `run_eval` also uploads the eval dataset.
+
+---
+
 ## API
 
 | Method | Path                  | Description                          |
