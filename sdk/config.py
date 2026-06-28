@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     azure_openai_deployment: str = "gpt-4o"
     openai_api_version: str = "2024-08-01-preview"
     gemini_api_key: str = ""
-    gemini_model: str = "gemini-1.5-pro"
+    gemini_model: str = "gemini-2.5-flash"
 
     # --- Observability ---
     langchain_tracing_v2: bool = False
