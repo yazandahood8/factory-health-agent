@@ -1,0 +1,4002 @@
+[
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T00:00:00Z",
+    "vibration_mm_s": 0.91,
+    "temperature_c": 45.3,
+    "pressure_bar": 6.6,
+    "rpm": 1452
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T01:00:00Z",
+    "vibration_mm_s": 2.3,
+    "temperature_c": 43.3,
+    "pressure_bar": 6.33,
+    "rpm": 1479
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T02:00:00Z",
+    "vibration_mm_s": 1.42,
+    "temperature_c": 41.3,
+    "pressure_bar": 5.73,
+    "rpm": 1452
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T03:00:00Z",
+    "vibration_mm_s": 0.67,
+    "temperature_c": 59.3,
+    "pressure_bar": 4.24,
+    "rpm": 1468
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T04:00:00Z",
+    "vibration_mm_s": 0.35,
+    "temperature_c": 47.8,
+    "pressure_bar": 6.51,
+    "rpm": 1480
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T05:00:00Z",
+    "vibration_mm_s": 0.17,
+    "temperature_c": 60.5,
+    "pressure_bar": 4.2,
+    "rpm": 1457
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T06:00:00Z",
+    "vibration_mm_s": 0.13,
+    "temperature_c": 70.0,
+    "pressure_bar": 5.16,
+    "rpm": 1454
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T07:00:00Z",
+    "vibration_mm_s": 1.51,
+    "temperature_c": 60.0,
+    "pressure_bar": 6.24,
+    "rpm": 1471
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T08:00:00Z",
+    "vibration_mm_s": 0.51,
+    "temperature_c": 60.4,
+    "pressure_bar": 6.56,
+    "rpm": 1461
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T09:00:00Z",
+    "vibration_mm_s": 0.27,
+    "temperature_c": 64.9,
+    "pressure_bar": 6.26,
+    "rpm": 1469
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T10:00:00Z",
+    "vibration_mm_s": 0.58,
+    "temperature_c": 63.8,
+    "pressure_bar": 5.71,
+    "rpm": 1460
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T11:00:00Z",
+    "vibration_mm_s": 1.3,
+    "temperature_c": 72.3,
+    "pressure_bar": 5.45,
+    "rpm": 1457
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T12:00:00Z",
+    "vibration_mm_s": 2.22,
+    "temperature_c": 64.5,
+    "pressure_bar": 4.98,
+    "rpm": 1468
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T13:00:00Z",
+    "vibration_mm_s": 0.84,
+    "temperature_c": 57.3,
+    "pressure_bar": 5.37,
+    "rpm": 1464
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T14:00:00Z",
+    "vibration_mm_s": 0.81,
+    "temperature_c": 74.3,
+    "pressure_bar": 4.47,
+    "rpm": 1463
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T15:00:00Z",
+    "vibration_mm_s": 0.46,
+    "temperature_c": 52.0,
+    "pressure_bar": 7.73,
+    "rpm": 1463
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T16:00:00Z",
+    "vibration_mm_s": 0.11,
+    "temperature_c": 63.4,
+    "pressure_bar": 7.06,
+    "rpm": 1468
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T17:00:00Z",
+    "vibration_mm_s": 2.21,
+    "temperature_c": 68.6,
+    "pressure_bar": 5.36,
+    "rpm": 1461
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T18:00:00Z",
+    "vibration_mm_s": 1.66,
+    "temperature_c": 60.3,
+    "pressure_bar": 5.82,
+    "rpm": 1476
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T19:00:00Z",
+    "vibration_mm_s": 0.26,
+    "temperature_c": 49.4,
+    "pressure_bar": 6.79,
+    "rpm": 1452
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T20:00:00Z",
+    "vibration_mm_s": 0.17,
+    "temperature_c": 64.6,
+    "pressure_bar": 6.59,
+    "rpm": 1471
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T21:00:00Z",
+    "vibration_mm_s": 2.3,
+    "temperature_c": 50.0,
+    "pressure_bar": 5.54,
+    "rpm": 1471
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T22:00:00Z",
+    "vibration_mm_s": 0.97,
+    "temperature_c": 72.9,
+    "pressure_bar": 5.42,
+    "rpm": 1469
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-20T23:00:00Z",
+    "vibration_mm_s": 0.33,
+    "temperature_c": 42.1,
+    "pressure_bar": 7.07,
+    "rpm": 1454
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T00:00:00Z",
+    "vibration_mm_s": 2.07,
+    "temperature_c": 53.9,
+    "pressure_bar": 7.67,
+    "rpm": 1465
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T01:00:00Z",
+    "vibration_mm_s": 0.23,
+    "temperature_c": 55.7,
+    "pressure_bar": 6.2,
+    "rpm": 1478
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T02:00:00Z",
+    "vibration_mm_s": 0.38,
+    "temperature_c": 55.1,
+    "pressure_bar": 6.2,
+    "rpm": 1472
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T03:00:00Z",
+    "vibration_mm_s": 1.16,
+    "temperature_c": 52.6,
+    "pressure_bar": 7.54,
+    "rpm": 1480
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T04:00:00Z",
+    "vibration_mm_s": 0.65,
+    "temperature_c": 42.9,
+    "pressure_bar": 4.61,
+    "rpm": 1471
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T05:00:00Z",
+    "vibration_mm_s": 0.65,
+    "temperature_c": 57.0,
+    "pressure_bar": 6.36,
+    "rpm": 1458
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T06:00:00Z",
+    "vibration_mm_s": 0.79,
+    "temperature_c": 45.1,
+    "pressure_bar": 6.14,
+    "rpm": 1469
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T07:00:00Z",
+    "vibration_mm_s": 1.59,
+    "temperature_c": 73.4,
+    "pressure_bar": 6.76,
+    "rpm": 1466
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T08:00:00Z",
+    "vibration_mm_s": 2.66,
+    "temperature_c": 62.9,
+    "pressure_bar": 6.96,
+    "rpm": 1464
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T09:00:00Z",
+    "vibration_mm_s": 2.52,
+    "temperature_c": 67.3,
+    "pressure_bar": 7.5,
+    "rpm": 1475
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T10:00:00Z",
+    "vibration_mm_s": 1.57,
+    "temperature_c": 53.9,
+    "pressure_bar": 5.58,
+    "rpm": 1465
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T11:00:00Z",
+    "vibration_mm_s": 1.78,
+    "temperature_c": 42.2,
+    "pressure_bar": 4.27,
+    "rpm": 1456
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T12:00:00Z",
+    "vibration_mm_s": 1.23,
+    "temperature_c": 43.8,
+    "pressure_bar": 6.4,
+    "rpm": 1453
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T13:00:00Z",
+    "vibration_mm_s": 0.0,
+    "temperature_c": 45.3,
+    "pressure_bar": 4.41,
+    "rpm": 1461
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T14:00:00Z",
+    "vibration_mm_s": 1.72,
+    "temperature_c": 42.5,
+    "pressure_bar": 4.83,
+    "rpm": 1462
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T15:00:00Z",
+    "vibration_mm_s": 0.42,
+    "temperature_c": 48.8,
+    "pressure_bar": 5.39,
+    "rpm": 1461
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T16:00:00Z",
+    "vibration_mm_s": 1.33,
+    "temperature_c": 44.0,
+    "pressure_bar": 5.95,
+    "rpm": 1464
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T17:00:00Z",
+    "vibration_mm_s": 1.35,
+    "temperature_c": 50.9,
+    "pressure_bar": 4.58,
+    "rpm": 1473
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T18:00:00Z",
+    "vibration_mm_s": 0.96,
+    "temperature_c": 49.3,
+    "pressure_bar": 7.32,
+    "rpm": 1455
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T19:00:00Z",
+    "vibration_mm_s": 1.45,
+    "temperature_c": 47.2,
+    "pressure_bar": 7.81,
+    "rpm": 1461
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T20:00:00Z",
+    "vibration_mm_s": 0.41,
+    "temperature_c": 59.0,
+    "pressure_bar": 4.11,
+    "rpm": 1466
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T21:00:00Z",
+    "vibration_mm_s": 0.83,
+    "temperature_c": 62.5,
+    "pressure_bar": 4.36,
+    "rpm": 1477
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T22:00:00Z",
+    "vibration_mm_s": 0.73,
+    "temperature_c": 52.8,
+    "pressure_bar": 4.67,
+    "rpm": 1474
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-21T23:00:00Z",
+    "vibration_mm_s": 0.62,
+    "temperature_c": 59.0,
+    "pressure_bar": 6.01,
+    "rpm": 1470
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T00:00:00Z",
+    "vibration_mm_s": 0.62,
+    "temperature_c": 68.4,
+    "pressure_bar": 7.94,
+    "rpm": 1477
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T01:00:00Z",
+    "vibration_mm_s": 0.55,
+    "temperature_c": 48.4,
+    "pressure_bar": 5.6,
+    "rpm": 1475
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T02:00:00Z",
+    "vibration_mm_s": 0.63,
+    "temperature_c": 58.1,
+    "pressure_bar": 5.42,
+    "rpm": 1450
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T03:00:00Z",
+    "vibration_mm_s": 2.77,
+    "temperature_c": 67.7,
+    "pressure_bar": 5.89,
+    "rpm": 1456
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T04:00:00Z",
+    "vibration_mm_s": 1.94,
+    "temperature_c": 73.5,
+    "pressure_bar": 5.79,
+    "rpm": 1479
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T05:00:00Z",
+    "vibration_mm_s": 2.02,
+    "temperature_c": 52.2,
+    "pressure_bar": 7.9,
+    "rpm": 1452
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T06:00:00Z",
+    "vibration_mm_s": 0.62,
+    "temperature_c": 47.9,
+    "pressure_bar": 4.79,
+    "rpm": 1456
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T07:00:00Z",
+    "vibration_mm_s": 1.35,
+    "temperature_c": 74.5,
+    "pressure_bar": 6.44,
+    "rpm": 1450
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T08:00:00Z",
+    "vibration_mm_s": 1.34,
+    "temperature_c": 62.9,
+    "pressure_bar": 7.2,
+    "rpm": 1452
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T09:00:00Z",
+    "vibration_mm_s": 2.34,
+    "temperature_c": 44.2,
+    "pressure_bar": 5.55,
+    "rpm": 1472
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T10:00:00Z",
+    "vibration_mm_s": 2.1,
+    "temperature_c": 56.7,
+    "pressure_bar": 4.71,
+    "rpm": 1475
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T11:00:00Z",
+    "vibration_mm_s": 1.78,
+    "temperature_c": 43.0,
+    "pressure_bar": 7.78,
+    "rpm": 1473
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T12:00:00Z",
+    "vibration_mm_s": 1.11,
+    "temperature_c": 54.0,
+    "pressure_bar": 7.79,
+    "rpm": 1473
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T13:00:00Z",
+    "vibration_mm_s": 0.44,
+    "temperature_c": 74.8,
+    "pressure_bar": 4.11,
+    "rpm": 1468
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T14:00:00Z",
+    "vibration_mm_s": 2.53,
+    "temperature_c": 68.2,
+    "pressure_bar": 4.58,
+    "rpm": 1476
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T15:00:00Z",
+    "vibration_mm_s": 1.67,
+    "temperature_c": 56.6,
+    "pressure_bar": 7.75,
+    "rpm": 1454
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T16:00:00Z",
+    "vibration_mm_s": 1.54,
+    "temperature_c": 44.6,
+    "pressure_bar": 4.06,
+    "rpm": 1473
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T17:00:00Z",
+    "vibration_mm_s": 1.82,
+    "temperature_c": 58.4,
+    "pressure_bar": 7.73,
+    "rpm": 1463
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T18:00:00Z",
+    "vibration_mm_s": 2.76,
+    "temperature_c": 46.8,
+    "pressure_bar": 7.5,
+    "rpm": 1450
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T19:00:00Z",
+    "vibration_mm_s": 0.71,
+    "temperature_c": 50.3,
+    "pressure_bar": 4.96,
+    "rpm": 1468
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T20:00:00Z",
+    "vibration_mm_s": 0.91,
+    "temperature_c": 59.1,
+    "pressure_bar": 7.34,
+    "rpm": 1451
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T21:00:00Z",
+    "vibration_mm_s": 2.55,
+    "temperature_c": 52.4,
+    "pressure_bar": 5.83,
+    "rpm": 1468
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T22:00:00Z",
+    "vibration_mm_s": 2.28,
+    "temperature_c": 58.1,
+    "pressure_bar": 7.31,
+    "rpm": 1478
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-22T23:00:00Z",
+    "vibration_mm_s": 1.4,
+    "temperature_c": 58.6,
+    "pressure_bar": 6.09,
+    "rpm": 1450
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T00:00:00Z",
+    "vibration_mm_s": 2.44,
+    "temperature_c": 67.2,
+    "pressure_bar": 6.43,
+    "rpm": 1474
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T01:00:00Z",
+    "vibration_mm_s": 2.24,
+    "temperature_c": 46.0,
+    "pressure_bar": 5.89,
+    "rpm": 1473
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T02:00:00Z",
+    "vibration_mm_s": 0.34,
+    "temperature_c": 42.2,
+    "pressure_bar": 6.73,
+    "rpm": 1466
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T03:00:00Z",
+    "vibration_mm_s": 1.56,
+    "temperature_c": 67.4,
+    "pressure_bar": 4.42,
+    "rpm": 1467
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T04:00:00Z",
+    "vibration_mm_s": 0.16,
+    "temperature_c": 46.7,
+    "pressure_bar": 4.17,
+    "rpm": 1453
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T05:00:00Z",
+    "vibration_mm_s": 1.42,
+    "temperature_c": 59.7,
+    "pressure_bar": 7.04,
+    "rpm": 1479
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T06:00:00Z",
+    "vibration_mm_s": 0.18,
+    "temperature_c": 51.4,
+    "pressure_bar": 7.89,
+    "rpm": 1469
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T07:00:00Z",
+    "vibration_mm_s": 1.43,
+    "temperature_c": 64.2,
+    "pressure_bar": 5.81,
+    "rpm": 1467
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T08:00:00Z",
+    "vibration_mm_s": 2.26,
+    "temperature_c": 57.8,
+    "pressure_bar": 4.99,
+    "rpm": 1466
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T09:00:00Z",
+    "vibration_mm_s": 2.45,
+    "temperature_c": 73.0,
+    "pressure_bar": 5.04,
+    "rpm": 1467
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T10:00:00Z",
+    "vibration_mm_s": 2.5,
+    "temperature_c": 47.1,
+    "pressure_bar": 5.79,
+    "rpm": 1463
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T11:00:00Z",
+    "vibration_mm_s": 0.34,
+    "temperature_c": 55.5,
+    "pressure_bar": 4.29,
+    "rpm": 1457
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T12:00:00Z",
+    "vibration_mm_s": 1.2,
+    "temperature_c": 47.4,
+    "pressure_bar": 5.21,
+    "rpm": 1453
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T13:00:00Z",
+    "vibration_mm_s": 2.51,
+    "temperature_c": 45.4,
+    "pressure_bar": 6.86,
+    "rpm": 1471
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T14:00:00Z",
+    "vibration_mm_s": 6.33,
+    "temperature_c": 60.9,
+    "pressure_bar": 4.55,
+    "rpm": 1464
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T15:00:00Z",
+    "vibration_mm_s": 6.36,
+    "temperature_c": 85.3,
+    "pressure_bar": 5.59,
+    "rpm": 1465
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T16:00:00Z",
+    "vibration_mm_s": 6.38,
+    "temperature_c": 75.4,
+    "pressure_bar": 4.89,
+    "rpm": 1472
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T17:00:00Z",
+    "vibration_mm_s": 6.41,
+    "temperature_c": 70.0,
+    "pressure_bar": 5.36,
+    "rpm": 1456
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T18:00:00Z",
+    "vibration_mm_s": 6.44,
+    "temperature_c": 55.2,
+    "pressure_bar": 5.46,
+    "rpm": 1460
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T19:00:00Z",
+    "vibration_mm_s": 6.47,
+    "temperature_c": 67.4,
+    "pressure_bar": 4.07,
+    "rpm": 1460
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T20:00:00Z",
+    "vibration_mm_s": 6.5,
+    "temperature_c": 62.3,
+    "pressure_bar": 7.84,
+    "rpm": 1453
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T21:00:00Z",
+    "vibration_mm_s": 6.52,
+    "temperature_c": 79.6,
+    "pressure_bar": 7.89,
+    "rpm": 1453
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T22:00:00Z",
+    "vibration_mm_s": 6.55,
+    "temperature_c": 61.5,
+    "pressure_bar": 7.62,
+    "rpm": 1455
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-23T23:00:00Z",
+    "vibration_mm_s": 6.58,
+    "temperature_c": 56.5,
+    "pressure_bar": 5.69,
+    "rpm": 1479
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-24T00:00:00Z",
+    "vibration_mm_s": 6.61,
+    "temperature_c": 85.1,
+    "pressure_bar": 5.62,
+    "rpm": 1467
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-24T01:00:00Z",
+    "vibration_mm_s": 6.64,
+    "temperature_c": 72.0,
+    "pressure_bar": 6.8,
+    "rpm": 1452
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-24T02:00:00Z",
+    "vibration_mm_s": 6.66,
+    "temperature_c": 80.0,
+    "pressure_bar": 4.73,
+    "rpm": 1478
+  },
+  {
+    "machine_id": "pump_001",
+    "timestamp": "2026-06-24T03:00:00Z",
+    "vibration_mm_s": 6.69,
+    "temperature_c": 84.8,
+    "pressure_bar": 6.54,
+    "rpm": 1475
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T00:00:00Z",
+    "vibration_mm_s": 1.17,
+    "temperature_c": 69.3,
+    "pressure_bar": 0.0,
+    "rpm": 2967
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T01:00:00Z",
+    "vibration_mm_s": 0.3,
+    "temperature_c": 79.5,
+    "pressure_bar": 0.0,
+    "rpm": 2974
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T02:00:00Z",
+    "vibration_mm_s": 0.05,
+    "temperature_c": 84.8,
+    "pressure_bar": 0.0,
+    "rpm": 2973
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T03:00:00Z",
+    "vibration_mm_s": 4.17,
+    "temperature_c": 55.7,
+    "pressure_bar": 0.0,
+    "rpm": 2964
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T04:00:00Z",
+    "vibration_mm_s": 0.19,
+    "temperature_c": 73.4,
+    "pressure_bar": 0.0,
+    "rpm": 2963
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T05:00:00Z",
+    "vibration_mm_s": 4.36,
+    "temperature_c": 55.5,
+    "pressure_bar": 0.0,
+    "rpm": 2965
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T06:00:00Z",
+    "vibration_mm_s": 0.91,
+    "temperature_c": 57.5,
+    "pressure_bar": 0.0,
+    "rpm": 2969
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T07:00:00Z",
+    "vibration_mm_s": 2.39,
+    "temperature_c": 53.2,
+    "pressure_bar": 0.0,
+    "rpm": 2974
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T08:00:00Z",
+    "vibration_mm_s": 2.25,
+    "temperature_c": 52.1,
+    "pressure_bar": 0.0,
+    "rpm": 2971
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T09:00:00Z",
+    "vibration_mm_s": 3.62,
+    "temperature_c": 84.8,
+    "pressure_bar": 0.0,
+    "rpm": 2961
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T10:00:00Z",
+    "vibration_mm_s": 0.07,
+    "temperature_c": 74.3,
+    "pressure_bar": 0.0,
+    "rpm": 2977
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T11:00:00Z",
+    "vibration_mm_s": 4.4,
+    "temperature_c": 65.6,
+    "pressure_bar": 0.0,
+    "rpm": 2967
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T12:00:00Z",
+    "vibration_mm_s": 4.21,
+    "temperature_c": 49.3,
+    "pressure_bar": 0.0,
+    "rpm": 2980
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T13:00:00Z",
+    "vibration_mm_s": 1.94,
+    "temperature_c": 64.8,
+    "pressure_bar": 0.0,
+    "rpm": 2972
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T14:00:00Z",
+    "vibration_mm_s": 4.37,
+    "temperature_c": 57.3,
+    "pressure_bar": 0.0,
+    "rpm": 2966
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T15:00:00Z",
+    "vibration_mm_s": 4.42,
+    "temperature_c": 58.7,
+    "pressure_bar": 0.0,
+    "rpm": 2982
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T16:00:00Z",
+    "vibration_mm_s": 3.28,
+    "temperature_c": 50.6,
+    "pressure_bar": 0.0,
+    "rpm": 2971
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T17:00:00Z",
+    "vibration_mm_s": 4.42,
+    "temperature_c": 78.5,
+    "pressure_bar": 0.0,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T18:00:00Z",
+    "vibration_mm_s": 0.32,
+    "temperature_c": 74.6,
+    "pressure_bar": 0.0,
+    "rpm": 2968
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T19:00:00Z",
+    "vibration_mm_s": 1.94,
+    "temperature_c": 47.2,
+    "pressure_bar": 0.0,
+    "rpm": 2981
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T20:00:00Z",
+    "vibration_mm_s": 3.79,
+    "temperature_c": 79.8,
+    "pressure_bar": 0.0,
+    "rpm": 2981
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T21:00:00Z",
+    "vibration_mm_s": 4.37,
+    "temperature_c": 69.0,
+    "pressure_bar": 0.0,
+    "rpm": 2982
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T22:00:00Z",
+    "vibration_mm_s": 1.32,
+    "temperature_c": 63.4,
+    "pressure_bar": 0.0,
+    "rpm": 2965
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-20T23:00:00Z",
+    "vibration_mm_s": 1.21,
+    "temperature_c": 45.1,
+    "pressure_bar": 0.0,
+    "rpm": 2971
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T00:00:00Z",
+    "vibration_mm_s": 4.33,
+    "temperature_c": 83.9,
+    "pressure_bar": 0.0,
+    "rpm": 2977
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T01:00:00Z",
+    "vibration_mm_s": 1.46,
+    "temperature_c": 46.4,
+    "pressure_bar": 0.0,
+    "rpm": 2969
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T02:00:00Z",
+    "vibration_mm_s": 0.98,
+    "temperature_c": 52.3,
+    "pressure_bar": 0.0,
+    "rpm": 2970
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T03:00:00Z",
+    "vibration_mm_s": 1.72,
+    "temperature_c": 64.0,
+    "pressure_bar": 0.0,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T04:00:00Z",
+    "vibration_mm_s": 2.95,
+    "temperature_c": 54.9,
+    "pressure_bar": 0.0,
+    "rpm": 2984
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T05:00:00Z",
+    "vibration_mm_s": 0.02,
+    "temperature_c": 55.6,
+    "pressure_bar": 0.0,
+    "rpm": 2962
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T06:00:00Z",
+    "vibration_mm_s": 0.65,
+    "temperature_c": 68.5,
+    "pressure_bar": 0.0,
+    "rpm": 2972
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T07:00:00Z",
+    "vibration_mm_s": 0.1,
+    "temperature_c": 57.2,
+    "pressure_bar": 0.0,
+    "rpm": 2967
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T08:00:00Z",
+    "vibration_mm_s": 0.38,
+    "temperature_c": 83.3,
+    "pressure_bar": 0.0,
+    "rpm": 2984
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T09:00:00Z",
+    "vibration_mm_s": 0.7,
+    "temperature_c": 80.7,
+    "pressure_bar": 0.0,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T10:00:00Z",
+    "vibration_mm_s": 3.96,
+    "temperature_c": 60.6,
+    "pressure_bar": 0.0,
+    "rpm": 2970
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T11:00:00Z",
+    "vibration_mm_s": 3.24,
+    "temperature_c": 64.8,
+    "pressure_bar": 0.0,
+    "rpm": 2969
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T12:00:00Z",
+    "vibration_mm_s": 3.26,
+    "temperature_c": 70.7,
+    "pressure_bar": 0.0,
+    "rpm": 2961
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T13:00:00Z",
+    "vibration_mm_s": 3.71,
+    "temperature_c": 73.6,
+    "pressure_bar": 0.0,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T14:00:00Z",
+    "vibration_mm_s": 2.82,
+    "temperature_c": 74.4,
+    "pressure_bar": 0.0,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T15:00:00Z",
+    "vibration_mm_s": 2.27,
+    "temperature_c": 81.4,
+    "pressure_bar": 0.0,
+    "rpm": 2984
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T16:00:00Z",
+    "vibration_mm_s": 2.27,
+    "temperature_c": 78.4,
+    "pressure_bar": 0.0,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T17:00:00Z",
+    "vibration_mm_s": 0.07,
+    "temperature_c": 72.5,
+    "pressure_bar": 0.0,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T18:00:00Z",
+    "vibration_mm_s": 4.02,
+    "temperature_c": 72.3,
+    "pressure_bar": 0.0,
+    "rpm": 2982
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T19:00:00Z",
+    "vibration_mm_s": 2.89,
+    "temperature_c": 48.4,
+    "pressure_bar": 0.0,
+    "rpm": 2961
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T20:00:00Z",
+    "vibration_mm_s": 0.6,
+    "temperature_c": 59.4,
+    "pressure_bar": 0.0,
+    "rpm": 2963
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T21:00:00Z",
+    "vibration_mm_s": 1.69,
+    "temperature_c": 63.1,
+    "pressure_bar": 0.0,
+    "rpm": 2961
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T22:00:00Z",
+    "vibration_mm_s": 2.82,
+    "temperature_c": 70.0,
+    "pressure_bar": 0.0,
+    "rpm": 2981
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-21T23:00:00Z",
+    "vibration_mm_s": 1.1,
+    "temperature_c": 55.6,
+    "pressure_bar": 0.0,
+    "rpm": 2974
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T00:00:00Z",
+    "vibration_mm_s": 3.59,
+    "temperature_c": 74.9,
+    "pressure_bar": 0.0,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T01:00:00Z",
+    "vibration_mm_s": 4.04,
+    "temperature_c": 48.7,
+    "pressure_bar": 0.0,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T02:00:00Z",
+    "vibration_mm_s": 0.3,
+    "temperature_c": 74.5,
+    "pressure_bar": 0.0,
+    "rpm": 2968
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T03:00:00Z",
+    "vibration_mm_s": 3.64,
+    "temperature_c": 78.8,
+    "pressure_bar": 0.0,
+    "rpm": 2967
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T04:00:00Z",
+    "vibration_mm_s": 3.28,
+    "temperature_c": 53.2,
+    "pressure_bar": 0.0,
+    "rpm": 2983
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T05:00:00Z",
+    "vibration_mm_s": 2.92,
+    "temperature_c": 63.4,
+    "pressure_bar": 0.0,
+    "rpm": 2972
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T06:00:00Z",
+    "vibration_mm_s": 0.35,
+    "temperature_c": 81.4,
+    "pressure_bar": 0.0,
+    "rpm": 2969
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T07:00:00Z",
+    "vibration_mm_s": 3.45,
+    "temperature_c": 69.7,
+    "pressure_bar": 0.0,
+    "rpm": 2980
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T08:00:00Z",
+    "vibration_mm_s": 0.89,
+    "temperature_c": 69.0,
+    "pressure_bar": 0.0,
+    "rpm": 2970
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T09:00:00Z",
+    "vibration_mm_s": 1.14,
+    "temperature_c": 74.7,
+    "pressure_bar": 0.0,
+    "rpm": 2969
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T10:00:00Z",
+    "vibration_mm_s": 2.8,
+    "temperature_c": 50.3,
+    "pressure_bar": 0.0,
+    "rpm": 2975
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T11:00:00Z",
+    "vibration_mm_s": 0.27,
+    "temperature_c": 55.8,
+    "pressure_bar": 0.0,
+    "rpm": 2981
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T12:00:00Z",
+    "vibration_mm_s": 0.45,
+    "temperature_c": 53.7,
+    "pressure_bar": 0.0,
+    "rpm": 2975
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T13:00:00Z",
+    "vibration_mm_s": 1.31,
+    "temperature_c": 65.7,
+    "pressure_bar": 0.0,
+    "rpm": 2974
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T14:00:00Z",
+    "vibration_mm_s": 2.1,
+    "temperature_c": 75.7,
+    "pressure_bar": 0.0,
+    "rpm": 2977
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T15:00:00Z",
+    "vibration_mm_s": 0.9,
+    "temperature_c": 84.1,
+    "pressure_bar": 0.0,
+    "rpm": 2975
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T16:00:00Z",
+    "vibration_mm_s": 0.08,
+    "temperature_c": 63.4,
+    "pressure_bar": 0.0,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T17:00:00Z",
+    "vibration_mm_s": 4.36,
+    "temperature_c": 63.0,
+    "pressure_bar": 0.0,
+    "rpm": 2968
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T18:00:00Z",
+    "vibration_mm_s": 1.74,
+    "temperature_c": 81.7,
+    "pressure_bar": 0.0,
+    "rpm": 2966
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T19:00:00Z",
+    "vibration_mm_s": 0.34,
+    "temperature_c": 48.6,
+    "pressure_bar": 0.0,
+    "rpm": 2983
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T20:00:00Z",
+    "vibration_mm_s": 2.36,
+    "temperature_c": 83.1,
+    "pressure_bar": 0.0,
+    "rpm": 2964
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T21:00:00Z",
+    "vibration_mm_s": 2.72,
+    "temperature_c": 70.3,
+    "pressure_bar": 0.0,
+    "rpm": 2968
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T22:00:00Z",
+    "vibration_mm_s": 3.99,
+    "temperature_c": 73.1,
+    "pressure_bar": 0.0,
+    "rpm": 2967
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-22T23:00:00Z",
+    "vibration_mm_s": 2.24,
+    "temperature_c": 80.0,
+    "pressure_bar": 0.0,
+    "rpm": 2972
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T00:00:00Z",
+    "vibration_mm_s": 0.11,
+    "temperature_c": 45.1,
+    "pressure_bar": 0.0,
+    "rpm": 2975
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T01:00:00Z",
+    "vibration_mm_s": 3.07,
+    "temperature_c": 61.2,
+    "pressure_bar": 0.0,
+    "rpm": 2983
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T02:00:00Z",
+    "vibration_mm_s": 0.63,
+    "temperature_c": 58.8,
+    "pressure_bar": 0.0,
+    "rpm": 2970
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T03:00:00Z",
+    "vibration_mm_s": 0.54,
+    "temperature_c": 58.3,
+    "pressure_bar": 0.0,
+    "rpm": 2970
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T04:00:00Z",
+    "vibration_mm_s": 3.38,
+    "temperature_c": 78.6,
+    "pressure_bar": 0.0,
+    "rpm": 2963
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T05:00:00Z",
+    "vibration_mm_s": 4.23,
+    "temperature_c": 52.8,
+    "pressure_bar": 0.0,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T06:00:00Z",
+    "vibration_mm_s": 4.06,
+    "temperature_c": 56.6,
+    "pressure_bar": 0.0,
+    "rpm": 2971
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T07:00:00Z",
+    "vibration_mm_s": 0.29,
+    "temperature_c": 60.6,
+    "pressure_bar": 0.0,
+    "rpm": 2978
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T08:00:00Z",
+    "vibration_mm_s": 0.34,
+    "temperature_c": 82.0,
+    "pressure_bar": 0.0,
+    "rpm": 2984
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T09:00:00Z",
+    "vibration_mm_s": 1.24,
+    "temperature_c": 46.9,
+    "pressure_bar": 0.0,
+    "rpm": 2963
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T10:00:00Z",
+    "vibration_mm_s": 0.23,
+    "temperature_c": 71.5,
+    "pressure_bar": 0.0,
+    "rpm": 2980
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T11:00:00Z",
+    "vibration_mm_s": 4.21,
+    "temperature_c": 55.0,
+    "pressure_bar": 0.0,
+    "rpm": 2968
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T12:00:00Z",
+    "vibration_mm_s": 1.96,
+    "temperature_c": 57.6,
+    "pressure_bar": 0.0,
+    "rpm": 2984
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T13:00:00Z",
+    "vibration_mm_s": 1.68,
+    "temperature_c": 83.2,
+    "pressure_bar": 0.0,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T14:00:00Z",
+    "vibration_mm_s": 3.65,
+    "temperature_c": 70.2,
+    "pressure_bar": 0.0,
+    "rpm": 2977
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T15:00:00Z",
+    "vibration_mm_s": 2.47,
+    "temperature_c": 73.8,
+    "pressure_bar": 0.0,
+    "rpm": 2961
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T16:00:00Z",
+    "vibration_mm_s": 4.2,
+    "temperature_c": 61.4,
+    "pressure_bar": 0.0,
+    "rpm": 2979
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T17:00:00Z",
+    "vibration_mm_s": 3.39,
+    "temperature_c": 70.8,
+    "pressure_bar": 0.0,
+    "rpm": 2969
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T18:00:00Z",
+    "vibration_mm_s": 2.19,
+    "temperature_c": 81.5,
+    "pressure_bar": 0.0,
+    "rpm": 2977
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T19:00:00Z",
+    "vibration_mm_s": 0.57,
+    "temperature_c": 63.9,
+    "pressure_bar": 0.0,
+    "rpm": 2970
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T20:00:00Z",
+    "vibration_mm_s": 1.27,
+    "temperature_c": 55.2,
+    "pressure_bar": 0.0,
+    "rpm": 2983
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T21:00:00Z",
+    "vibration_mm_s": 4.39,
+    "temperature_c": 55.4,
+    "pressure_bar": 0.0,
+    "rpm": 2980
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T22:00:00Z",
+    "vibration_mm_s": 1.07,
+    "temperature_c": 64.3,
+    "pressure_bar": 0.0,
+    "rpm": 2981
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-23T23:00:00Z",
+    "vibration_mm_s": 1.77,
+    "temperature_c": 51.7,
+    "pressure_bar": 0.0,
+    "rpm": 2965
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-24T00:00:00Z",
+    "vibration_mm_s": 0.34,
+    "temperature_c": 65.0,
+    "pressure_bar": 0.0,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-24T01:00:00Z",
+    "vibration_mm_s": 2.24,
+    "temperature_c": 53.8,
+    "pressure_bar": 0.0,
+    "rpm": 2970
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-24T02:00:00Z",
+    "vibration_mm_s": 4.48,
+    "temperature_c": 63.0,
+    "pressure_bar": 0.0,
+    "rpm": 2964
+  },
+  {
+    "machine_id": "motor_002",
+    "timestamp": "2026-06-24T03:00:00Z",
+    "vibration_mm_s": 2.47,
+    "temperature_c": 54.8,
+    "pressure_bar": 0.0,
+    "rpm": 2965
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T00:00:00Z",
+    "vibration_mm_s": 1.54,
+    "temperature_c": 63.2,
+    "pressure_bar": 6.96,
+    "rpm": 2966
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T01:00:00Z",
+    "vibration_mm_s": 3.64,
+    "temperature_c": 67.1,
+    "pressure_bar": 6.08,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T02:00:00Z",
+    "vibration_mm_s": 1.72,
+    "temperature_c": 86.1,
+    "pressure_bar": 6.84,
+    "rpm": 2967
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T03:00:00Z",
+    "vibration_mm_s": 1.52,
+    "temperature_c": 62.2,
+    "pressure_bar": 7.11,
+    "rpm": 2973
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T04:00:00Z",
+    "vibration_mm_s": 0.57,
+    "temperature_c": 77.6,
+    "pressure_bar": 8.52,
+    "rpm": 2963
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T05:00:00Z",
+    "vibration_mm_s": 0.42,
+    "temperature_c": 91.4,
+    "pressure_bar": 7.54,
+    "rpm": 2991
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T06:00:00Z",
+    "vibration_mm_s": 2.01,
+    "temperature_c": 93.4,
+    "pressure_bar": 9.39,
+    "rpm": 2951
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T07:00:00Z",
+    "vibration_mm_s": 0.57,
+    "temperature_c": 74.9,
+    "pressure_bar": 9.05,
+    "rpm": 2980
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T08:00:00Z",
+    "vibration_mm_s": 4.36,
+    "temperature_c": 77.1,
+    "pressure_bar": 6.29,
+    "rpm": 2983
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T09:00:00Z",
+    "vibration_mm_s": 3.85,
+    "temperature_c": 94.0,
+    "pressure_bar": 6.99,
+    "rpm": 2956
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T10:00:00Z",
+    "vibration_mm_s": 1.01,
+    "temperature_c": 65.3,
+    "pressure_bar": 9.89,
+    "rpm": 2956
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T11:00:00Z",
+    "vibration_mm_s": 4.24,
+    "temperature_c": 85.3,
+    "pressure_bar": 8.59,
+    "rpm": 2998
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T12:00:00Z",
+    "vibration_mm_s": 4.03,
+    "temperature_c": 63.0,
+    "pressure_bar": 9.11,
+    "rpm": 2950
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T13:00:00Z",
+    "vibration_mm_s": 3.52,
+    "temperature_c": 68.1,
+    "pressure_bar": 9.68,
+    "rpm": 2991
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T14:00:00Z",
+    "vibration_mm_s": 3.22,
+    "temperature_c": 93.7,
+    "pressure_bar": 8.51,
+    "rpm": 2983
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T15:00:00Z",
+    "vibration_mm_s": 2.86,
+    "temperature_c": 84.5,
+    "pressure_bar": 6.45,
+    "rpm": 2954
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T16:00:00Z",
+    "vibration_mm_s": 1.35,
+    "temperature_c": 93.0,
+    "pressure_bar": 6.77,
+    "rpm": 2966
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T17:00:00Z",
+    "vibration_mm_s": 1.01,
+    "temperature_c": 81.0,
+    "pressure_bar": 6.04,
+    "rpm": 2969
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T18:00:00Z",
+    "vibration_mm_s": 4.48,
+    "temperature_c": 69.8,
+    "pressure_bar": 7.27,
+    "rpm": 2965
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T19:00:00Z",
+    "vibration_mm_s": 2.14,
+    "temperature_c": 68.2,
+    "pressure_bar": 6.99,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T20:00:00Z",
+    "vibration_mm_s": 3.17,
+    "temperature_c": 70.8,
+    "pressure_bar": 6.09,
+    "rpm": 2981
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T21:00:00Z",
+    "vibration_mm_s": 3.98,
+    "temperature_c": 82.7,
+    "pressure_bar": 6.32,
+    "rpm": 2964
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T22:00:00Z",
+    "vibration_mm_s": 3.0,
+    "temperature_c": 92.4,
+    "pressure_bar": 6.91,
+    "rpm": 2952
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-20T23:00:00Z",
+    "vibration_mm_s": 3.13,
+    "temperature_c": 85.1,
+    "pressure_bar": 7.45,
+    "rpm": 2975
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T00:00:00Z",
+    "vibration_mm_s": 0.89,
+    "temperature_c": 87.9,
+    "pressure_bar": 8.96,
+    "rpm": 2982
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T01:00:00Z",
+    "vibration_mm_s": 0.3,
+    "temperature_c": 77.3,
+    "pressure_bar": 6.8,
+    "rpm": 2999
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T02:00:00Z",
+    "vibration_mm_s": 3.69,
+    "temperature_c": 68.1,
+    "pressure_bar": 6.89,
+    "rpm": 2998
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T03:00:00Z",
+    "vibration_mm_s": 4.0,
+    "temperature_c": 63.8,
+    "pressure_bar": 8.49,
+    "rpm": 2989
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T04:00:00Z",
+    "vibration_mm_s": 0.84,
+    "temperature_c": 67.8,
+    "pressure_bar": 7.67,
+    "rpm": 2992
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T05:00:00Z",
+    "vibration_mm_s": 0.25,
+    "temperature_c": 80.8,
+    "pressure_bar": 9.69,
+    "rpm": 2953
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T06:00:00Z",
+    "vibration_mm_s": 0.96,
+    "temperature_c": 94.1,
+    "pressure_bar": 6.57,
+    "rpm": 2953
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T07:00:00Z",
+    "vibration_mm_s": 3.19,
+    "temperature_c": 66.4,
+    "pressure_bar": 7.8,
+    "rpm": 2995
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T08:00:00Z",
+    "vibration_mm_s": 3.98,
+    "temperature_c": 85.6,
+    "pressure_bar": 9.99,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T09:00:00Z",
+    "vibration_mm_s": 1.48,
+    "temperature_c": 66.5,
+    "pressure_bar": 9.74,
+    "rpm": 2997
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T10:00:00Z",
+    "vibration_mm_s": 2.1,
+    "temperature_c": 70.9,
+    "pressure_bar": 8.9,
+    "rpm": 2973
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T11:00:00Z",
+    "vibration_mm_s": 4.43,
+    "temperature_c": 75.5,
+    "pressure_bar": 6.44,
+    "rpm": 2955
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T12:00:00Z",
+    "vibration_mm_s": 1.26,
+    "temperature_c": 72.3,
+    "pressure_bar": 9.82,
+    "rpm": 2957
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T13:00:00Z",
+    "vibration_mm_s": 2.53,
+    "temperature_c": 86.6,
+    "pressure_bar": 7.52,
+    "rpm": 2999
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T14:00:00Z",
+    "vibration_mm_s": 3.7,
+    "temperature_c": 88.8,
+    "pressure_bar": 7.73,
+    "rpm": 2953
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T15:00:00Z",
+    "vibration_mm_s": 3.17,
+    "temperature_c": 66.9,
+    "pressure_bar": 8.17,
+    "rpm": 2978
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T16:00:00Z",
+    "vibration_mm_s": 0.87,
+    "temperature_c": 72.7,
+    "pressure_bar": 9.59,
+    "rpm": 2951
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T17:00:00Z",
+    "vibration_mm_s": 2.84,
+    "temperature_c": 68.7,
+    "pressure_bar": 8.5,
+    "rpm": 2975
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T18:00:00Z",
+    "vibration_mm_s": 0.18,
+    "temperature_c": 61.2,
+    "pressure_bar": 6.25,
+    "rpm": 2953
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T19:00:00Z",
+    "vibration_mm_s": 1.16,
+    "temperature_c": 86.2,
+    "pressure_bar": 9.59,
+    "rpm": 2971
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T20:00:00Z",
+    "vibration_mm_s": 1.63,
+    "temperature_c": 71.7,
+    "pressure_bar": 9.82,
+    "rpm": 2952
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T21:00:00Z",
+    "vibration_mm_s": 1.18,
+    "temperature_c": 85.1,
+    "pressure_bar": 7.27,
+    "rpm": 2967
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T22:00:00Z",
+    "vibration_mm_s": 1.34,
+    "temperature_c": 85.3,
+    "pressure_bar": 8.38,
+    "rpm": 2990
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-21T23:00:00Z",
+    "vibration_mm_s": 4.26,
+    "temperature_c": 62.3,
+    "pressure_bar": 9.3,
+    "rpm": 2956
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T00:00:00Z",
+    "vibration_mm_s": 2.14,
+    "temperature_c": 93.5,
+    "pressure_bar": 9.82,
+    "rpm": 2974
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T01:00:00Z",
+    "vibration_mm_s": 3.55,
+    "temperature_c": 92.0,
+    "pressure_bar": 9.26,
+    "rpm": 2958
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T02:00:00Z",
+    "vibration_mm_s": 4.18,
+    "temperature_c": 66.4,
+    "pressure_bar": 9.21,
+    "rpm": 2997
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T03:00:00Z",
+    "vibration_mm_s": 1.36,
+    "temperature_c": 84.2,
+    "pressure_bar": 6.61,
+    "rpm": 2965
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T04:00:00Z",
+    "vibration_mm_s": 1.48,
+    "temperature_c": 71.2,
+    "pressure_bar": 7.45,
+    "rpm": 3000
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T05:00:00Z",
+    "vibration_mm_s": 2.68,
+    "temperature_c": 77.9,
+    "pressure_bar": 7.57,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T06:00:00Z",
+    "vibration_mm_s": 1.11,
+    "temperature_c": 62.3,
+    "pressure_bar": 6.14,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T07:00:00Z",
+    "vibration_mm_s": 2.45,
+    "temperature_c": 65.6,
+    "pressure_bar": 7.71,
+    "rpm": 2956
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T08:00:00Z",
+    "vibration_mm_s": 4.45,
+    "temperature_c": 69.3,
+    "pressure_bar": 6.34,
+    "rpm": 2956
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T09:00:00Z",
+    "vibration_mm_s": 1.89,
+    "temperature_c": 94.6,
+    "pressure_bar": 9.89,
+    "rpm": 2961
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T10:00:00Z",
+    "vibration_mm_s": 1.05,
+    "temperature_c": 74.6,
+    "pressure_bar": 8.48,
+    "rpm": 2993
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T11:00:00Z",
+    "vibration_mm_s": 1.06,
+    "temperature_c": 78.8,
+    "pressure_bar": 9.1,
+    "rpm": 2998
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T12:00:00Z",
+    "vibration_mm_s": 0.55,
+    "temperature_c": 89.4,
+    "pressure_bar": 7.18,
+    "rpm": 2986
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T13:00:00Z",
+    "vibration_mm_s": 1.2,
+    "temperature_c": 68.9,
+    "pressure_bar": 7.04,
+    "rpm": 2978
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T14:00:00Z",
+    "vibration_mm_s": 1.11,
+    "temperature_c": 68.6,
+    "pressure_bar": 6.61,
+    "rpm": 2987
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T15:00:00Z",
+    "vibration_mm_s": 0.85,
+    "temperature_c": 62.3,
+    "pressure_bar": 7.01,
+    "rpm": 2965
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T16:00:00Z",
+    "vibration_mm_s": 2.28,
+    "temperature_c": 68.1,
+    "pressure_bar": 9.23,
+    "rpm": 2991
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T17:00:00Z",
+    "vibration_mm_s": 2.09,
+    "temperature_c": 61.3,
+    "pressure_bar": 6.02,
+    "rpm": 2964
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T18:00:00Z",
+    "vibration_mm_s": 3.78,
+    "temperature_c": 92.0,
+    "pressure_bar": 6.16,
+    "rpm": 2968
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T19:00:00Z",
+    "vibration_mm_s": 1.05,
+    "temperature_c": 61.8,
+    "pressure_bar": 8.4,
+    "rpm": 2987
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T20:00:00Z",
+    "vibration_mm_s": 0.87,
+    "temperature_c": 62.6,
+    "pressure_bar": 8.05,
+    "rpm": 2961
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T21:00:00Z",
+    "vibration_mm_s": 2.02,
+    "temperature_c": 69.1,
+    "pressure_bar": 9.11,
+    "rpm": 2950
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T22:00:00Z",
+    "vibration_mm_s": 0.48,
+    "temperature_c": 80.9,
+    "pressure_bar": 8.48,
+    "rpm": 2963
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-22T23:00:00Z",
+    "vibration_mm_s": 0.17,
+    "temperature_c": 71.9,
+    "pressure_bar": 6.18,
+    "rpm": 2966
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T00:00:00Z",
+    "vibration_mm_s": 0.17,
+    "temperature_c": 85.6,
+    "pressure_bar": 9.66,
+    "rpm": 2950
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T01:00:00Z",
+    "vibration_mm_s": 3.68,
+    "temperature_c": 74.3,
+    "pressure_bar": 7.49,
+    "rpm": 2989
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T02:00:00Z",
+    "vibration_mm_s": 1.4,
+    "temperature_c": 67.1,
+    "pressure_bar": 9.18,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T03:00:00Z",
+    "vibration_mm_s": 2.18,
+    "temperature_c": 74.3,
+    "pressure_bar": 9.18,
+    "rpm": 2992
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T04:00:00Z",
+    "vibration_mm_s": 2.48,
+    "temperature_c": 82.4,
+    "pressure_bar": 6.36,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T05:00:00Z",
+    "vibration_mm_s": 1.79,
+    "temperature_c": 69.5,
+    "pressure_bar": 9.95,
+    "rpm": 2992
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T06:00:00Z",
+    "vibration_mm_s": 1.38,
+    "temperature_c": 93.4,
+    "pressure_bar": 7.25,
+    "rpm": 2986
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T07:00:00Z",
+    "vibration_mm_s": 3.98,
+    "temperature_c": 74.5,
+    "pressure_bar": 6.07,
+    "rpm": 2999
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T08:00:00Z",
+    "vibration_mm_s": 4.48,
+    "temperature_c": 72.7,
+    "pressure_bar": 6.79,
+    "rpm": 2996
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T09:00:00Z",
+    "vibration_mm_s": 1.82,
+    "temperature_c": 93.0,
+    "pressure_bar": 7.74,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T10:00:00Z",
+    "vibration_mm_s": 1.91,
+    "temperature_c": 88.7,
+    "pressure_bar": 7.62,
+    "rpm": 2973
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T11:00:00Z",
+    "vibration_mm_s": 2.07,
+    "temperature_c": 65.7,
+    "pressure_bar": 6.06,
+    "rpm": 2985
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T12:00:00Z",
+    "vibration_mm_s": 0.64,
+    "temperature_c": 88.2,
+    "pressure_bar": 7.59,
+    "rpm": 2986
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T13:00:00Z",
+    "vibration_mm_s": 2.8,
+    "temperature_c": 73.0,
+    "pressure_bar": 8.02,
+    "rpm": 2959
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T14:00:00Z",
+    "vibration_mm_s": 1.57,
+    "temperature_c": 65.7,
+    "pressure_bar": 6.69,
+    "rpm": 2954
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T15:00:00Z",
+    "vibration_mm_s": 0.49,
+    "temperature_c": 77.2,
+    "pressure_bar": 9.22,
+    "rpm": 2962
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T16:00:00Z",
+    "vibration_mm_s": 1.36,
+    "temperature_c": 89.3,
+    "pressure_bar": 6.17,
+    "rpm": 2980
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T17:00:00Z",
+    "vibration_mm_s": 1.42,
+    "temperature_c": 81.3,
+    "pressure_bar": 8.55,
+    "rpm": 2955
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T18:00:00Z",
+    "vibration_mm_s": 4.07,
+    "temperature_c": 81.7,
+    "pressure_bar": 9.3,
+    "rpm": 2960
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T19:00:00Z",
+    "vibration_mm_s": 2.88,
+    "temperature_c": 90.0,
+    "pressure_bar": 8.48,
+    "rpm": 2989
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T20:00:00Z",
+    "vibration_mm_s": 3.81,
+    "temperature_c": 89.0,
+    "pressure_bar": 6.73,
+    "rpm": 2963
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T21:00:00Z",
+    "vibration_mm_s": 0.19,
+    "temperature_c": 92.8,
+    "pressure_bar": 6.63,
+    "rpm": 2972
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T22:00:00Z",
+    "vibration_mm_s": 0.55,
+    "temperature_c": 68.6,
+    "pressure_bar": 8.9,
+    "rpm": 2962
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-23T23:00:00Z",
+    "vibration_mm_s": 0.18,
+    "temperature_c": 79.7,
+    "pressure_bar": 9.03,
+    "rpm": 2952
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-24T00:00:00Z",
+    "vibration_mm_s": 3.01,
+    "temperature_c": 71.3,
+    "pressure_bar": 7.56,
+    "rpm": 2979
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-24T01:00:00Z",
+    "vibration_mm_s": 2.48,
+    "temperature_c": 81.9,
+    "pressure_bar": 7.22,
+    "rpm": 2976
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-24T02:00:00Z",
+    "vibration_mm_s": 1.39,
+    "temperature_c": 68.7,
+    "pressure_bar": 7.56,
+    "rpm": 2973
+  },
+  {
+    "machine_id": "compressor_003",
+    "timestamp": "2026-06-24T03:00:00Z",
+    "vibration_mm_s": 2.01,
+    "temperature_c": 75.3,
+    "pressure_bar": 6.09,
+    "rpm": 2989
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T00:00:00Z",
+    "vibration_mm_s": 2.76,
+    "temperature_c": 46.3,
+    "pressure_bar": 0.45,
+    "rpm": 999
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T01:00:00Z",
+    "vibration_mm_s": 2.18,
+    "temperature_c": 46.0,
+    "pressure_bar": 0.18,
+    "rpm": 995
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T02:00:00Z",
+    "vibration_mm_s": 1.12,
+    "temperature_c": 32.3,
+    "pressure_bar": 0.36,
+    "rpm": 991
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T03:00:00Z",
+    "vibration_mm_s": 0.26,
+    "temperature_c": 45.5,
+    "pressure_bar": 0.51,
+    "rpm": 981
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T04:00:00Z",
+    "vibration_mm_s": 0.11,
+    "temperature_c": 34.6,
+    "pressure_bar": 0.92,
+    "rpm": 990
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T05:00:00Z",
+    "vibration_mm_s": 2.18,
+    "temperature_c": 47.9,
+    "pressure_bar": 0.05,
+    "rpm": 996
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T06:00:00Z",
+    "vibration_mm_s": 2.51,
+    "temperature_c": 52.8,
+    "pressure_bar": 0.78,
+    "rpm": 980
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T07:00:00Z",
+    "vibration_mm_s": 2.4,
+    "temperature_c": 64.9,
+    "pressure_bar": 0.73,
+    "rpm": 1006
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T08:00:00Z",
+    "vibration_mm_s": 0.31,
+    "temperature_c": 34.6,
+    "pressure_bar": 0.89,
+    "rpm": 989
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T09:00:00Z",
+    "vibration_mm_s": 2.68,
+    "temperature_c": 62.1,
+    "pressure_bar": 0.17,
+    "rpm": 1005
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T10:00:00Z",
+    "vibration_mm_s": 2.02,
+    "temperature_c": 37.7,
+    "pressure_bar": 0.83,
+    "rpm": 999
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T11:00:00Z",
+    "vibration_mm_s": 2.12,
+    "temperature_c": 35.6,
+    "pressure_bar": 0.9,
+    "rpm": 988
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T12:00:00Z",
+    "vibration_mm_s": 2.53,
+    "temperature_c": 46.0,
+    "pressure_bar": 0.25,
+    "rpm": 1010
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T13:00:00Z",
+    "vibration_mm_s": 2.58,
+    "temperature_c": 37.3,
+    "pressure_bar": 0.26,
+    "rpm": 996
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T14:00:00Z",
+    "vibration_mm_s": 0.66,
+    "temperature_c": 43.0,
+    "pressure_bar": 0.2,
+    "rpm": 992
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T15:00:00Z",
+    "vibration_mm_s": 0.45,
+    "temperature_c": 62.8,
+    "pressure_bar": 0.68,
+    "rpm": 1008
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T16:00:00Z",
+    "vibration_mm_s": 1.06,
+    "temperature_c": 57.7,
+    "pressure_bar": 0.26,
+    "rpm": 1004
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T17:00:00Z",
+    "vibration_mm_s": 1.49,
+    "temperature_c": 52.3,
+    "pressure_bar": 0.36,
+    "rpm": 1007
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T18:00:00Z",
+    "vibration_mm_s": 1.27,
+    "temperature_c": 48.3,
+    "pressure_bar": 0.69,
+    "rpm": 1008
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T19:00:00Z",
+    "vibration_mm_s": 0.29,
+    "temperature_c": 64.8,
+    "pressure_bar": 0.63,
+    "rpm": 992
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T20:00:00Z",
+    "vibration_mm_s": 2.07,
+    "temperature_c": 43.0,
+    "pressure_bar": 0.38,
+    "rpm": 991
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T21:00:00Z",
+    "vibration_mm_s": 1.62,
+    "temperature_c": 42.6,
+    "pressure_bar": 0.76,
+    "rpm": 994
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T22:00:00Z",
+    "vibration_mm_s": 0.64,
+    "temperature_c": 51.5,
+    "pressure_bar": 0.96,
+    "rpm": 989
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-20T23:00:00Z",
+    "vibration_mm_s": 2.3,
+    "temperature_c": 38.9,
+    "pressure_bar": 0.64,
+    "rpm": 1007
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T00:00:00Z",
+    "vibration_mm_s": 1.64,
+    "temperature_c": 53.2,
+    "pressure_bar": 0.31,
+    "rpm": 980
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T01:00:00Z",
+    "vibration_mm_s": 2.09,
+    "temperature_c": 37.8,
+    "pressure_bar": 0.29,
+    "rpm": 1000
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T02:00:00Z",
+    "vibration_mm_s": 1.21,
+    "temperature_c": 47.9,
+    "pressure_bar": 0.9,
+    "rpm": 984
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T03:00:00Z",
+    "vibration_mm_s": 1.37,
+    "temperature_c": 51.4,
+    "pressure_bar": 0.05,
+    "rpm": 981
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T04:00:00Z",
+    "vibration_mm_s": 0.01,
+    "temperature_c": 42.4,
+    "pressure_bar": 0.11,
+    "rpm": 991
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T05:00:00Z",
+    "vibration_mm_s": 1.5,
+    "temperature_c": 44.5,
+    "pressure_bar": 0.3,
+    "rpm": 984
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T06:00:00Z",
+    "vibration_mm_s": 0.57,
+    "temperature_c": 51.8,
+    "pressure_bar": 0.47,
+    "rpm": 984
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T07:00:00Z",
+    "vibration_mm_s": 0.04,
+    "temperature_c": 58.1,
+    "pressure_bar": 0.71,
+    "rpm": 994
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T08:00:00Z",
+    "vibration_mm_s": 0.27,
+    "temperature_c": 52.3,
+    "pressure_bar": 0.87,
+    "rpm": 1005
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T09:00:00Z",
+    "vibration_mm_s": 0.76,
+    "temperature_c": 58.4,
+    "pressure_bar": 0.97,
+    "rpm": 981
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T10:00:00Z",
+    "vibration_mm_s": 1.81,
+    "temperature_c": 49.7,
+    "pressure_bar": 0.35,
+    "rpm": 1000
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T11:00:00Z",
+    "vibration_mm_s": 1.62,
+    "temperature_c": 51.1,
+    "pressure_bar": 0.52,
+    "rpm": 995
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T12:00:00Z",
+    "vibration_mm_s": 0.7,
+    "temperature_c": 61.6,
+    "pressure_bar": 0.04,
+    "rpm": 997
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T13:00:00Z",
+    "vibration_mm_s": 0.07,
+    "temperature_c": 36.5,
+    "pressure_bar": 0.16,
+    "rpm": 1009
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T14:00:00Z",
+    "vibration_mm_s": 2.18,
+    "temperature_c": 30.4,
+    "pressure_bar": 0.55,
+    "rpm": 1010
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T15:00:00Z",
+    "vibration_mm_s": 0.55,
+    "temperature_c": 44.5,
+    "pressure_bar": 0.52,
+    "rpm": 1000
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T16:00:00Z",
+    "vibration_mm_s": 1.42,
+    "temperature_c": 52.5,
+    "pressure_bar": 0.81,
+    "rpm": 985
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T17:00:00Z",
+    "vibration_mm_s": 1.42,
+    "temperature_c": 32.2,
+    "pressure_bar": 0.63,
+    "rpm": 1008
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T18:00:00Z",
+    "vibration_mm_s": 2.03,
+    "temperature_c": 46.7,
+    "pressure_bar": 0.54,
+    "rpm": 992
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T19:00:00Z",
+    "vibration_mm_s": 2.36,
+    "temperature_c": 56.1,
+    "pressure_bar": 0.47,
+    "rpm": 1003
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T20:00:00Z",
+    "vibration_mm_s": 1.84,
+    "temperature_c": 36.1,
+    "pressure_bar": 1.0,
+    "rpm": 988
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T21:00:00Z",
+    "vibration_mm_s": 0.65,
+    "temperature_c": 31.4,
+    "pressure_bar": 0.34,
+    "rpm": 1003
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T22:00:00Z",
+    "vibration_mm_s": 2.59,
+    "temperature_c": 63.0,
+    "pressure_bar": 0.26,
+    "rpm": 981
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-21T23:00:00Z",
+    "vibration_mm_s": 0.74,
+    "temperature_c": 49.4,
+    "pressure_bar": 0.44,
+    "rpm": 1005
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T00:00:00Z",
+    "vibration_mm_s": 2.57,
+    "temperature_c": 64.0,
+    "pressure_bar": 0.3,
+    "rpm": 1009
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T01:00:00Z",
+    "vibration_mm_s": 2.7,
+    "temperature_c": 37.6,
+    "pressure_bar": 0.88,
+    "rpm": 980
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T02:00:00Z",
+    "vibration_mm_s": 0.48,
+    "temperature_c": 61.7,
+    "pressure_bar": 0.84,
+    "rpm": 986
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T03:00:00Z",
+    "vibration_mm_s": 2.65,
+    "temperature_c": 56.1,
+    "pressure_bar": 0.33,
+    "rpm": 1008
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T04:00:00Z",
+    "vibration_mm_s": 1.09,
+    "temperature_c": 51.0,
+    "pressure_bar": 0.38,
+    "rpm": 1007
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T05:00:00Z",
+    "vibration_mm_s": 1.77,
+    "temperature_c": 54.2,
+    "pressure_bar": 0.67,
+    "rpm": 997
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T06:00:00Z",
+    "vibration_mm_s": 1.31,
+    "temperature_c": 59.4,
+    "pressure_bar": 0.7,
+    "rpm": 1007
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T07:00:00Z",
+    "vibration_mm_s": 0.07,
+    "temperature_c": 63.4,
+    "pressure_bar": 0.23,
+    "rpm": 1008
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T08:00:00Z",
+    "vibration_mm_s": 0.86,
+    "temperature_c": 37.4,
+    "pressure_bar": 0.62,
+    "rpm": 982
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T09:00:00Z",
+    "vibration_mm_s": 1.58,
+    "temperature_c": 36.0,
+    "pressure_bar": 0.03,
+    "rpm": 983
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T10:00:00Z",
+    "vibration_mm_s": 0.3,
+    "temperature_c": 62.5,
+    "pressure_bar": 0.34,
+    "rpm": 984
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T11:00:00Z",
+    "vibration_mm_s": 1.96,
+    "temperature_c": 31.1,
+    "pressure_bar": 0.14,
+    "rpm": 1000
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T12:00:00Z",
+    "vibration_mm_s": 1.77,
+    "temperature_c": 54.4,
+    "pressure_bar": 0.74,
+    "rpm": 982
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T13:00:00Z",
+    "vibration_mm_s": 2.4,
+    "temperature_c": 56.7,
+    "pressure_bar": 0.2,
+    "rpm": 1010
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T14:00:00Z",
+    "vibration_mm_s": 2.29,
+    "temperature_c": 61.2,
+    "pressure_bar": 0.07,
+    "rpm": 1007
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T15:00:00Z",
+    "vibration_mm_s": 2.12,
+    "temperature_c": 54.9,
+    "pressure_bar": 0.38,
+    "rpm": 987
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T16:00:00Z",
+    "vibration_mm_s": 0.58,
+    "temperature_c": 33.9,
+    "pressure_bar": 0.03,
+    "rpm": 1007
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T17:00:00Z",
+    "vibration_mm_s": 2.55,
+    "temperature_c": 56.4,
+    "pressure_bar": 0.09,
+    "rpm": 1004
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T18:00:00Z",
+    "vibration_mm_s": 1.77,
+    "temperature_c": 40.1,
+    "pressure_bar": 0.1,
+    "rpm": 983
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T19:00:00Z",
+    "vibration_mm_s": 2.22,
+    "temperature_c": 52.6,
+    "pressure_bar": 0.29,
+    "rpm": 990
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T20:00:00Z",
+    "vibration_mm_s": 1.19,
+    "temperature_c": 30.7,
+    "pressure_bar": 0.26,
+    "rpm": 989
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T21:00:00Z",
+    "vibration_mm_s": 0.14,
+    "temperature_c": 56.6,
+    "pressure_bar": 0.91,
+    "rpm": 1004
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T22:00:00Z",
+    "vibration_mm_s": 2.7,
+    "temperature_c": 47.6,
+    "pressure_bar": 0.85,
+    "rpm": 999
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-22T23:00:00Z",
+    "vibration_mm_s": 2.09,
+    "temperature_c": 57.6,
+    "pressure_bar": 0.03,
+    "rpm": 996
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T00:00:00Z",
+    "vibration_mm_s": 2.16,
+    "temperature_c": 42.1,
+    "pressure_bar": 0.7,
+    "rpm": 997
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T01:00:00Z",
+    "vibration_mm_s": 1.59,
+    "temperature_c": 55.0,
+    "pressure_bar": 0.83,
+    "rpm": 998
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T02:00:00Z",
+    "vibration_mm_s": 2.3,
+    "temperature_c": 36.0,
+    "pressure_bar": 0.0,
+    "rpm": 986
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T03:00:00Z",
+    "vibration_mm_s": 0.81,
+    "temperature_c": 56.3,
+    "pressure_bar": 0.05,
+    "rpm": 991
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T04:00:00Z",
+    "vibration_mm_s": 1.37,
+    "temperature_c": 47.2,
+    "pressure_bar": 0.8,
+    "rpm": 985
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T05:00:00Z",
+    "vibration_mm_s": 2.71,
+    "temperature_c": 50.7,
+    "pressure_bar": 0.96,
+    "rpm": 996
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T06:00:00Z",
+    "vibration_mm_s": 0.73,
+    "temperature_c": 63.0,
+    "pressure_bar": 0.28,
+    "rpm": 986
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T07:00:00Z",
+    "vibration_mm_s": 2.63,
+    "temperature_c": 38.1,
+    "pressure_bar": 0.17,
+    "rpm": 1010
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T08:00:00Z",
+    "vibration_mm_s": 1.78,
+    "temperature_c": 32.8,
+    "pressure_bar": 0.79,
+    "rpm": 1002
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T09:00:00Z",
+    "vibration_mm_s": 1.57,
+    "temperature_c": 33.7,
+    "pressure_bar": 0.33,
+    "rpm": 983
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T10:00:00Z",
+    "vibration_mm_s": 1.12,
+    "temperature_c": 43.8,
+    "pressure_bar": 0.89,
+    "rpm": 982
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T11:00:00Z",
+    "vibration_mm_s": 1.18,
+    "temperature_c": 52.6,
+    "pressure_bar": 0.37,
+    "rpm": 989
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T12:00:00Z",
+    "vibration_mm_s": 0.74,
+    "temperature_c": 61.5,
+    "pressure_bar": 0.5,
+    "rpm": 992
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T13:00:00Z",
+    "vibration_mm_s": 2.75,
+    "temperature_c": 52.1,
+    "pressure_bar": 0.94,
+    "rpm": 984
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T14:00:00Z",
+    "vibration_mm_s": 1.49,
+    "temperature_c": 56.4,
+    "pressure_bar": 0.75,
+    "rpm": 1000
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T15:00:00Z",
+    "vibration_mm_s": 0.09,
+    "temperature_c": 50.4,
+    "pressure_bar": 0.52,
+    "rpm": 1007
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T16:00:00Z",
+    "vibration_mm_s": 2.36,
+    "temperature_c": 53.2,
+    "pressure_bar": 0.74,
+    "rpm": 985
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T17:00:00Z",
+    "vibration_mm_s": 1.3,
+    "temperature_c": 54.1,
+    "pressure_bar": 0.26,
+    "rpm": 987
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T18:00:00Z",
+    "vibration_mm_s": 0.35,
+    "temperature_c": 46.2,
+    "pressure_bar": 0.89,
+    "rpm": 987
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T19:00:00Z",
+    "vibration_mm_s": 1.42,
+    "temperature_c": 39.4,
+    "pressure_bar": 0.75,
+    "rpm": 1006
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T20:00:00Z",
+    "vibration_mm_s": 2.36,
+    "temperature_c": 35.4,
+    "pressure_bar": 0.16,
+    "rpm": 987
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T21:00:00Z",
+    "vibration_mm_s": 2.02,
+    "temperature_c": 51.1,
+    "pressure_bar": 0.35,
+    "rpm": 987
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T22:00:00Z",
+    "vibration_mm_s": 0.92,
+    "temperature_c": 36.6,
+    "pressure_bar": 0.98,
+    "rpm": 1003
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-23T23:00:00Z",
+    "vibration_mm_s": 2.79,
+    "temperature_c": 35.8,
+    "pressure_bar": 0.66,
+    "rpm": 986
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-24T00:00:00Z",
+    "vibration_mm_s": 1.08,
+    "temperature_c": 64.4,
+    "pressure_bar": 0.79,
+    "rpm": 1003
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-24T01:00:00Z",
+    "vibration_mm_s": 0.83,
+    "temperature_c": 39.6,
+    "pressure_bar": 0.11,
+    "rpm": 1009
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-24T02:00:00Z",
+    "vibration_mm_s": 0.3,
+    "temperature_c": 37.2,
+    "pressure_bar": 0.39,
+    "rpm": 981
+  },
+  {
+    "machine_id": "fan_004",
+    "timestamp": "2026-06-24T03:00:00Z",
+    "vibration_mm_s": 0.04,
+    "temperature_c": 59.9,
+    "pressure_bar": 0.44,
+    "rpm": 987
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T00:00:00Z",
+    "vibration_mm_s": 3.55,
+    "temperature_c": 75.3,
+    "pressure_bar": 0.0,
+    "rpm": 594
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T01:00:00Z",
+    "vibration_mm_s": 0.16,
+    "temperature_c": 60.3,
+    "pressure_bar": 0.0,
+    "rpm": 592
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T02:00:00Z",
+    "vibration_mm_s": 0.04,
+    "temperature_c": 59.7,
+    "pressure_bar": 0.0,
+    "rpm": 593
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T03:00:00Z",
+    "vibration_mm_s": 4.98,
+    "temperature_c": 73.5,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T04:00:00Z",
+    "vibration_mm_s": 2.99,
+    "temperature_c": 59.1,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T05:00:00Z",
+    "vibration_mm_s": 6.25,
+    "temperature_c": 81.0,
+    "pressure_bar": 0.0,
+    "rpm": 598
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T06:00:00Z",
+    "vibration_mm_s": 6.05,
+    "temperature_c": 77.2,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T07:00:00Z",
+    "vibration_mm_s": 0.88,
+    "temperature_c": 67.3,
+    "pressure_bar": 0.0,
+    "rpm": 588
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T08:00:00Z",
+    "vibration_mm_s": 4.46,
+    "temperature_c": 53.9,
+    "pressure_bar": 0.0,
+    "rpm": 593
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T09:00:00Z",
+    "vibration_mm_s": 1.72,
+    "temperature_c": 66.0,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T10:00:00Z",
+    "vibration_mm_s": 1.11,
+    "temperature_c": 84.0,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T11:00:00Z",
+    "vibration_mm_s": 3.23,
+    "temperature_c": 74.9,
+    "pressure_bar": 0.0,
+    "rpm": 593
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T12:00:00Z",
+    "vibration_mm_s": 3.68,
+    "temperature_c": 76.4,
+    "pressure_bar": 0.0,
+    "rpm": 585
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T13:00:00Z",
+    "vibration_mm_s": 6.35,
+    "temperature_c": 63.1,
+    "pressure_bar": 0.0,
+    "rpm": 580
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T14:00:00Z",
+    "vibration_mm_s": 2.76,
+    "temperature_c": 69.6,
+    "pressure_bar": 0.0,
+    "rpm": 583
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T15:00:00Z",
+    "vibration_mm_s": 0.27,
+    "temperature_c": 71.7,
+    "pressure_bar": 0.0,
+    "rpm": 585
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T16:00:00Z",
+    "vibration_mm_s": 5.09,
+    "temperature_c": 88.1,
+    "pressure_bar": 0.0,
+    "rpm": 586
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T17:00:00Z",
+    "vibration_mm_s": 3.69,
+    "temperature_c": 54.0,
+    "pressure_bar": 0.0,
+    "rpm": 598
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T18:00:00Z",
+    "vibration_mm_s": 3.24,
+    "temperature_c": 58.2,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T19:00:00Z",
+    "vibration_mm_s": 3.64,
+    "temperature_c": 75.6,
+    "pressure_bar": 0.0,
+    "rpm": 591
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T20:00:00Z",
+    "vibration_mm_s": 3.7,
+    "temperature_c": 66.4,
+    "pressure_bar": 0.0,
+    "rpm": 594
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T21:00:00Z",
+    "vibration_mm_s": 1.49,
+    "temperature_c": 77.4,
+    "pressure_bar": 0.0,
+    "rpm": 592
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T22:00:00Z",
+    "vibration_mm_s": 3.65,
+    "temperature_c": 87.3,
+    "pressure_bar": 0.0,
+    "rpm": 599
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-20T23:00:00Z",
+    "vibration_mm_s": 2.52,
+    "temperature_c": 52.3,
+    "pressure_bar": 0.0,
+    "rpm": 588
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T00:00:00Z",
+    "vibration_mm_s": 2.71,
+    "temperature_c": 52.5,
+    "pressure_bar": 0.0,
+    "rpm": 582
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T01:00:00Z",
+    "vibration_mm_s": 2.97,
+    "temperature_c": 66.8,
+    "pressure_bar": 0.0,
+    "rpm": 591
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T02:00:00Z",
+    "vibration_mm_s": 4.12,
+    "temperature_c": 54.4,
+    "pressure_bar": 0.0,
+    "rpm": 589
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T03:00:00Z",
+    "vibration_mm_s": 5.26,
+    "temperature_c": 87.6,
+    "pressure_bar": 0.0,
+    "rpm": 596
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T04:00:00Z",
+    "vibration_mm_s": 6.9,
+    "temperature_c": 89.8,
+    "pressure_bar": 0.0,
+    "rpm": 592
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T05:00:00Z",
+    "vibration_mm_s": 3.28,
+    "temperature_c": 56.6,
+    "pressure_bar": 0.0,
+    "rpm": 582
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T06:00:00Z",
+    "vibration_mm_s": 5.75,
+    "temperature_c": 75.4,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T07:00:00Z",
+    "vibration_mm_s": 4.56,
+    "temperature_c": 78.8,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T08:00:00Z",
+    "vibration_mm_s": 2.51,
+    "temperature_c": 75.6,
+    "pressure_bar": 0.0,
+    "rpm": 593
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T09:00:00Z",
+    "vibration_mm_s": 3.32,
+    "temperature_c": 61.8,
+    "pressure_bar": 0.0,
+    "rpm": 597
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T10:00:00Z",
+    "vibration_mm_s": 4.61,
+    "temperature_c": 81.2,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T11:00:00Z",
+    "vibration_mm_s": 2.52,
+    "temperature_c": 84.0,
+    "pressure_bar": 0.0,
+    "rpm": 588
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T12:00:00Z",
+    "vibration_mm_s": 5.0,
+    "temperature_c": 77.5,
+    "pressure_bar": 0.0,
+    "rpm": 593
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T13:00:00Z",
+    "vibration_mm_s": 4.82,
+    "temperature_c": 69.3,
+    "pressure_bar": 0.0,
+    "rpm": 588
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T14:00:00Z",
+    "vibration_mm_s": 2.54,
+    "temperature_c": 76.2,
+    "pressure_bar": 0.0,
+    "rpm": 590
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T15:00:00Z",
+    "vibration_mm_s": 3.4,
+    "temperature_c": 67.1,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T16:00:00Z",
+    "vibration_mm_s": 0.61,
+    "temperature_c": 85.9,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T17:00:00Z",
+    "vibration_mm_s": 6.59,
+    "temperature_c": 84.2,
+    "pressure_bar": 0.0,
+    "rpm": 581
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T18:00:00Z",
+    "vibration_mm_s": 0.61,
+    "temperature_c": 72.6,
+    "pressure_bar": 0.0,
+    "rpm": 590
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T19:00:00Z",
+    "vibration_mm_s": 5.57,
+    "temperature_c": 55.6,
+    "pressure_bar": 0.0,
+    "rpm": 591
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T20:00:00Z",
+    "vibration_mm_s": 4.5,
+    "temperature_c": 50.6,
+    "pressure_bar": 0.0,
+    "rpm": 580
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T21:00:00Z",
+    "vibration_mm_s": 1.49,
+    "temperature_c": 52.9,
+    "pressure_bar": 0.0,
+    "rpm": 589
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T22:00:00Z",
+    "vibration_mm_s": 1.78,
+    "temperature_c": 54.1,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-21T23:00:00Z",
+    "vibration_mm_s": 6.06,
+    "temperature_c": 57.4,
+    "pressure_bar": 0.0,
+    "rpm": 594
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T00:00:00Z",
+    "vibration_mm_s": 2.46,
+    "temperature_c": 56.1,
+    "pressure_bar": 0.0,
+    "rpm": 592
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T01:00:00Z",
+    "vibration_mm_s": 5.62,
+    "temperature_c": 56.7,
+    "pressure_bar": 0.0,
+    "rpm": 599
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T02:00:00Z",
+    "vibration_mm_s": 6.94,
+    "temperature_c": 53.6,
+    "pressure_bar": 0.0,
+    "rpm": 597
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T03:00:00Z",
+    "vibration_mm_s": 5.6,
+    "temperature_c": 83.6,
+    "pressure_bar": 0.0,
+    "rpm": 586
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T04:00:00Z",
+    "vibration_mm_s": 3.51,
+    "temperature_c": 58.5,
+    "pressure_bar": 0.0,
+    "rpm": 582
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T05:00:00Z",
+    "vibration_mm_s": 5.27,
+    "temperature_c": 67.5,
+    "pressure_bar": 0.0,
+    "rpm": 583
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T06:00:00Z",
+    "vibration_mm_s": 3.94,
+    "temperature_c": 60.6,
+    "pressure_bar": 0.0,
+    "rpm": 587
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T07:00:00Z",
+    "vibration_mm_s": 5.87,
+    "temperature_c": 68.9,
+    "pressure_bar": 0.0,
+    "rpm": 597
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T08:00:00Z",
+    "vibration_mm_s": 0.42,
+    "temperature_c": 68.7,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T09:00:00Z",
+    "vibration_mm_s": 4.97,
+    "temperature_c": 59.9,
+    "pressure_bar": 0.0,
+    "rpm": 585
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T10:00:00Z",
+    "vibration_mm_s": 3.83,
+    "temperature_c": 84.5,
+    "pressure_bar": 0.0,
+    "rpm": 580
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T11:00:00Z",
+    "vibration_mm_s": 1.14,
+    "temperature_c": 62.8,
+    "pressure_bar": 0.0,
+    "rpm": 598
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T12:00:00Z",
+    "vibration_mm_s": 3.53,
+    "temperature_c": 61.9,
+    "pressure_bar": 0.0,
+    "rpm": 594
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T13:00:00Z",
+    "vibration_mm_s": 2.66,
+    "temperature_c": 66.8,
+    "pressure_bar": 0.0,
+    "rpm": 582
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T14:00:00Z",
+    "vibration_mm_s": 1.28,
+    "temperature_c": 64.4,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T15:00:00Z",
+    "vibration_mm_s": 0.2,
+    "temperature_c": 74.4,
+    "pressure_bar": 0.0,
+    "rpm": 590
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T16:00:00Z",
+    "vibration_mm_s": 5.74,
+    "temperature_c": 53.8,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T17:00:00Z",
+    "vibration_mm_s": 3.44,
+    "temperature_c": 85.9,
+    "pressure_bar": 0.0,
+    "rpm": 581
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T18:00:00Z",
+    "vibration_mm_s": 1.51,
+    "temperature_c": 66.6,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T19:00:00Z",
+    "vibration_mm_s": 2.4,
+    "temperature_c": 84.5,
+    "pressure_bar": 0.0,
+    "rpm": 591
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T20:00:00Z",
+    "vibration_mm_s": 2.42,
+    "temperature_c": 81.1,
+    "pressure_bar": 0.0,
+    "rpm": 597
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T21:00:00Z",
+    "vibration_mm_s": 5.47,
+    "temperature_c": 58.4,
+    "pressure_bar": 0.0,
+    "rpm": 593
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T22:00:00Z",
+    "vibration_mm_s": 2.43,
+    "temperature_c": 60.1,
+    "pressure_bar": 0.0,
+    "rpm": 581
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-22T23:00:00Z",
+    "vibration_mm_s": 5.87,
+    "temperature_c": 61.7,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T00:00:00Z",
+    "vibration_mm_s": 2.87,
+    "temperature_c": 70.1,
+    "pressure_bar": 0.0,
+    "rpm": 588
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T01:00:00Z",
+    "vibration_mm_s": 6.2,
+    "temperature_c": 63.8,
+    "pressure_bar": 0.0,
+    "rpm": 586
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T02:00:00Z",
+    "vibration_mm_s": 4.65,
+    "temperature_c": 81.7,
+    "pressure_bar": 0.0,
+    "rpm": 590
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T03:00:00Z",
+    "vibration_mm_s": 1.37,
+    "temperature_c": 78.5,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T04:00:00Z",
+    "vibration_mm_s": 4.16,
+    "temperature_c": 75.4,
+    "pressure_bar": 0.0,
+    "rpm": 581
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T05:00:00Z",
+    "vibration_mm_s": 2.83,
+    "temperature_c": 72.2,
+    "pressure_bar": 0.0,
+    "rpm": 592
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T06:00:00Z",
+    "vibration_mm_s": 3.87,
+    "temperature_c": 52.0,
+    "pressure_bar": 0.0,
+    "rpm": 589
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T07:00:00Z",
+    "vibration_mm_s": 0.77,
+    "temperature_c": 51.9,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T08:00:00Z",
+    "vibration_mm_s": 4.32,
+    "temperature_c": 76.3,
+    "pressure_bar": 0.0,
+    "rpm": 596
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T09:00:00Z",
+    "vibration_mm_s": 6.46,
+    "temperature_c": 74.5,
+    "pressure_bar": 0.0,
+    "rpm": 599
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T10:00:00Z",
+    "vibration_mm_s": 1.04,
+    "temperature_c": 76.9,
+    "pressure_bar": 0.0,
+    "rpm": 599
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T11:00:00Z",
+    "vibration_mm_s": 6.22,
+    "temperature_c": 53.3,
+    "pressure_bar": 0.0,
+    "rpm": 581
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T12:00:00Z",
+    "vibration_mm_s": 4.74,
+    "temperature_c": 68.3,
+    "pressure_bar": 0.0,
+    "rpm": 585
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T13:00:00Z",
+    "vibration_mm_s": 0.72,
+    "temperature_c": 57.3,
+    "pressure_bar": 0.0,
+    "rpm": 581
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T14:00:00Z",
+    "vibration_mm_s": 16.05,
+    "temperature_c": 66.0,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T15:00:00Z",
+    "vibration_mm_s": 16.12,
+    "temperature_c": 96.9,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T16:00:00Z",
+    "vibration_mm_s": 16.19,
+    "temperature_c": 84.5,
+    "pressure_bar": 0.0,
+    "rpm": 588
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T17:00:00Z",
+    "vibration_mm_s": 16.26,
+    "temperature_c": 69.4,
+    "pressure_bar": 0.0,
+    "rpm": 581
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T18:00:00Z",
+    "vibration_mm_s": 16.33,
+    "temperature_c": 79.2,
+    "pressure_bar": 0.0,
+    "rpm": 600
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T19:00:00Z",
+    "vibration_mm_s": 16.4,
+    "temperature_c": 98.6,
+    "pressure_bar": 0.0,
+    "rpm": 595
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T20:00:00Z",
+    "vibration_mm_s": 16.47,
+    "temperature_c": 63.6,
+    "pressure_bar": 0.0,
+    "rpm": 583
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T21:00:00Z",
+    "vibration_mm_s": 16.54,
+    "temperature_c": 78.8,
+    "pressure_bar": 0.0,
+    "rpm": 592
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T22:00:00Z",
+    "vibration_mm_s": 16.61,
+    "temperature_c": 62.6,
+    "pressure_bar": 0.0,
+    "rpm": 592
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-23T23:00:00Z",
+    "vibration_mm_s": 16.68,
+    "temperature_c": 101.7,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-24T00:00:00Z",
+    "vibration_mm_s": 16.76,
+    "temperature_c": 78.5,
+    "pressure_bar": 0.0,
+    "rpm": 583
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-24T01:00:00Z",
+    "vibration_mm_s": 16.83,
+    "temperature_c": 80.9,
+    "pressure_bar": 0.0,
+    "rpm": 584
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-24T02:00:00Z",
+    "vibration_mm_s": 16.9,
+    "temperature_c": 79.1,
+    "pressure_bar": 0.0,
+    "rpm": 580
+  },
+  {
+    "machine_id": "gearbox_005",
+    "timestamp": "2026-06-24T03:00:00Z",
+    "vibration_mm_s": 16.97,
+    "temperature_c": 66.9,
+    "pressure_bar": 0.0,
+    "rpm": 582
+  }
+]

@@ -55,7 +55,7 @@ def test_recommender_critical_first_action_is_load_reduction(ctx):
     assert "reduce load" in plan.actions[0].lower()
 
 
-def test_full_pipeline_critical_path(pipeline, tenant_a):
+def test_full_pipeline_end_to_end(pipeline, tenant_a):
     state = pipeline.run("pump_001", tenant_a, {"vibration_mm_s": 6.5, "temperature_c": 95})
     assert state["anomaly_report"].severity is Severity.CRITICAL
     assert state["diagnosis"] is not None

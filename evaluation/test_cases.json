@@ -16,18 +16,25 @@
     "id": "tc_003",
     "input": {"machine_id": "motor_002", "sensor_data": {"vibration_mm_s": 9.5, "temperature_c": 95}},
     "expected_severity": "CRITICAL",
-    "expected_urgency": "CRITICAL"
+    "expected_diagnosis": "Bearing outer race defect",
+    "expected_urgency": "CRITICAL",
+    "expected_confidence_min": 0.6
   },
   {
     "id": "tc_004",
     "input": {"machine_id": "motor_002", "sensor_data": {"vibration_mm_s": 5.5, "temperature_c": 70}},
-    "expected_severity": "WARNING"
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Mechanical unbalance / loose foundation bolts",
+    "expected_urgency": "HIGH",
+    "expected_confidence_min": 0.6
   },
   {
     "id": "tc_005",
     "input": {"machine_id": "compressor_003", "sensor_data": {"vibration_mm_s": 8.5, "temperature_c": 112}},
     "expected_severity": "CRITICAL",
-    "expected_urgency": "CRITICAL"
+    "expected_diagnosis": "Rotor bearing wear",
+    "expected_urgency": "CRITICAL",
+    "expected_confidence_min": 0.6
   },
   {
     "id": "tc_006",
@@ -37,7 +44,10 @@
   {
     "id": "tc_007",
     "input": {"machine_id": "fan_004", "sensor_data": {"vibration_mm_s": 3.4, "temperature_c": 50}},
-    "expected_severity": "WARNING"
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Aerodynamic unbalance from fouling",
+    "expected_urgency": "MEDIUM",
+    "expected_confidence_min": 0.6
   },
   {
     "id": "tc_008",
@@ -48,7 +58,9 @@
     "id": "tc_009",
     "input": {"machine_id": "gearbox_005", "sensor_data": {"vibration_mm_s": 13.5, "temperature_c": 100}},
     "expected_severity": "CRITICAL",
-    "expected_urgency": "CRITICAL"
+    "expected_diagnosis": "Bearing outer race defect",
+    "expected_urgency": "CRITICAL",
+    "expected_confidence_min": 0.6
   },
   {
     "id": "tc_010",
@@ -58,11 +70,91 @@
   {
     "id": "tc_011",
     "input": {"machine_id": "gearbox_005", "sensor_data": {"vibration_mm_s": 9.0, "temperature_c": 88}},
-    "expected_severity": "WARNING"
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Aerodynamic unbalance from fouling",
+    "expected_urgency": "MEDIUM",
+    "expected_confidence_min": 0.6
   },
   {
     "id": "tc_012",
     "input": {"machine_id": "compressor_003", "sensor_data": {"vibration_mm_s": 6.0, "temperature_c": 98}},
-    "expected_severity": "WARNING"
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Bearing outer race defect",
+    "expected_urgency": "HIGH",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_013",
+    "input": {"machine_id": "pump_001", "sensor_data": {"vibration_mm_s": 3.5, "temperature_c": 67}},
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Bearing outer race defect",
+    "expected_urgency": "MEDIUM",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_014",
+    "input": {"machine_id": "pump_001", "sensor_data": {"vibration_mm_s": 5.0, "temperature_c": 80}},
+    "expected_severity": "CRITICAL",
+    "expected_diagnosis": "Bearing outer race defect",
+    "expected_urgency": "CRITICAL",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_015",
+    "input": {"machine_id": "pump_001", "sensor_data": {"vibration_mm_s": 2.0, "temperature_c": 60}},
+    "expected_severity": "NORMAL"
+  },
+  {
+    "id": "tc_016",
+    "input": {"machine_id": "motor_002", "sensor_data": {"vibration_mm_s": 6.5, "temperature_c": 80}},
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Mechanical unbalance / loose foundation bolts",
+    "expected_urgency": "HIGH",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_017",
+    "input": {"machine_id": "motor_002", "sensor_data": {"vibration_mm_s": 8.5, "temperature_c": 92}},
+    "expected_severity": "CRITICAL",
+    "expected_diagnosis": "Bearing outer race defect",
+    "expected_urgency": "CRITICAL",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_018",
+    "input": {"machine_id": "compressor_003", "sensor_data": {"vibration_mm_s": 5.5, "temperature_c": 88}},
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Rotor bearing wear",
+    "expected_urgency": "MEDIUM",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_019",
+    "input": {"machine_id": "fan_004", "sensor_data": {"vibration_mm_s": 4.5, "temperature_c": 48}},
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Aerodynamic unbalance from fouling",
+    "expected_urgency": "MEDIUM",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_020",
+    "input": {"machine_id": "fan_004", "sensor_data": {"vibration_mm_s": 5.2, "temperature_c": 55}},
+    "expected_severity": "CRITICAL",
+    "expected_diagnosis": "Aerodynamic unbalance from fouling",
+    "expected_urgency": "CRITICAL",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_021",
+    "input": {"machine_id": "gearbox_005", "sensor_data": {"vibration_mm_s": 8.5, "temperature_c": 82}},
+    "expected_severity": "WARNING",
+    "expected_diagnosis": "Aerodynamic unbalance from fouling",
+    "expected_urgency": "MEDIUM",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_022",
+    "input": {"machine_id": "gearbox_005", "sensor_data": {"vibration_mm_s": 2.5, "temperature_c": 58}},
+    "expected_severity": "NORMAL"
   }
 ]

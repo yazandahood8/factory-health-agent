@@ -18,7 +18,7 @@ async def health(request: Request):
         if not settings.mongodb_uri:
             return "in-memory"
         try:
-            services.store._db.command  # noqa: B018 - attribute presence check
+            services.store._db.command("ping")
             return "connected"
         except Exception:  # pragma: no cover
             return "degraded"
@@ -35,10 +35,15 @@ async def health(request: Request):
 @router.get("/metrics", response_model=MetricsResponse)
 async def metrics(request: Request):
     services = request.app.state.services
+    collector = request.app.state.metrics
     tenant = request.state.tenant
+    stats = collector.stats(tenant.id)
     return MetricsResponse(
         tenant_id=tenant.id,
         spend_usd=round(services.llm.budget_manager.current_spend(tenant), 6),
         budget_usd=tenant.llm_budget_usd,
         llm_primary=services.llm.primary,
+        requests_total=stats.requests,
+        error_rate=round(stats.error_rate, 4),
+        p95_latency_ms=stats.p95_latency_ms,
     )

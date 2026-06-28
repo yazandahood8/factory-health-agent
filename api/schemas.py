@@ -42,3 +42,6 @@ class MetricsResponse(BaseModel):
     spend_usd: float
     budget_usd: float
     llm_primary: str
+    requests_total: int = 0
+    error_rate: float = 0.0
+    p95_latency_ms: float = 0.0

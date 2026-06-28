@@ -16,7 +16,6 @@ tenant-scoped :class:`AgentContext` is per-request.
 from __future__ import annotations
 
 import uuid
-from dataclasses import dataclass
 from typing import Optional
 
 from langgraph.graph import END, StateGraph
@@ -27,48 +26,23 @@ from agents.diagnostics import CONFIDENCE_FLOOR, DiagnosticsAgent
 from agents.recommender import RecommenderAgent
 from data.bootstrap import MACHINES, seed_rag, seed_store
 from data.seed_mongodb import DEMO_TENANTS
-from sdk.config import Settings, get_settings
-from sdk.hallucination_guard import HallucinationGuard
-from sdk.llm_router import LLMRouter
+from sdk.agent_sdk import AgentSDK, build_sdk
+from sdk.config import Settings
 from sdk.models import PipelineState, Severity, Tenant
-from sdk.observability import enable_tracing
-from sdk.rag_engine import RAGEngine
-from sdk.tenant_store import TenantIsolatedStore
+
+# Re-export so existing callers (api, tests) need no changes.
+Services = AgentSDK
 
 
-@dataclass
-class Services:
-    """Process-wide singletons shared across all requests/tenants."""
-
-    settings: Settings
-    store: TenantIsolatedStore
-    rag: RAGEngine
-    llm: LLMRouter
-    guard: HallucinationGuard
-
-    def context_for(self, tenant: Tenant) -> AgentContext:
-        return AgentContext(
-            tenant=tenant, store=self.store, rag=self.rag, llm=self.llm, guard=self.guard
-        )
-
-
-def build_services(settings: Optional[Settings] = None, seed: bool = True) -> Services:
-    settings = settings or get_settings()
-    enable_tracing(settings)  # turns on LangSmith if configured (no-op otherwise)
-    store = TenantIsolatedStore(settings)
-    rag = RAGEngine(settings)
-    llm = LLMRouter(settings)
-    guard = HallucinationGuard(threshold=0.8)
-    services = Services(settings, store, rag, llm, guard)
+def build_services(settings: Optional[Settings] = None, seed: bool = True) -> AgentSDK:
+    sdk = build_sdk(settings)
 
     if seed:
-        # Idempotent enough for a demo: seed RAG once, and seed each demo
-        # tenant's store only if it currently has no machines.
-        seed_rag(rag)
+        seed_rag(sdk.rag)
         for tenant in DEMO_TENANTS:
-            if not store.query(MACHINES, {}, tenant):
-                seed_store(store, tenant)
-    return services
+            if not sdk.store.query(MACHINES, {}, tenant):
+                seed_store(sdk.store, tenant)
+    return sdk
 
 
 # --------------------------------------------------------------------------
