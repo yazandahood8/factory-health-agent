@@ -45,3 +45,18 @@ class MetricsResponse(BaseModel):
     requests_total: int = 0
     error_rate: float = 0.0
     p95_latency_ms: float = 0.0
+
+
+class DemoTokenResponse(BaseModel):
+    token: str
+    tenant_id: str
+    expires_in: int
+
+
+class MachineInfo(BaseModel):
+    machine_id: str
+    machine_type: str = ""
+    manufacturer: str = ""
+    model: str = ""
+    iso_class: str = ""
+    normal_ranges: dict[str, Any] = Field(default_factory=dict)

@@ -15,7 +15,10 @@ from starlette.responses import JSONResponse
 from api.security import decode_token, tenant_from_claims
 from sdk.config import get_settings
 
-OPEN_PATHS = {"/v1/health", "/docs", "/openapi.json", "/redoc", "/"}
+OPEN_PATHS = {
+    "/v1/health", "/v1/info", "/v1/demo-token",
+    "/docs", "/openapi.json", "/redoc", "/",
+}
 
 
 class AuthMiddleware(BaseHTTPMiddleware):

@@ -7,8 +7,10 @@ from __future__ import annotations
 
 import time
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 
@@ -16,7 +18,9 @@ from agents.orchestrator import Pipeline, build_services
 from api.metrics_collector import MetricsCollector
 from api.middleware.auth import AuthMiddleware
 from api.middleware.rate_limit import RateLimitMiddleware
-from api.routes import analyze, health
+from api.routes import analyze, demo, health
+
+_UI_PATH = Path(__file__).parent / "static" / "index.html"
 
 
 @asynccontextmanager
@@ -57,9 +61,14 @@ def create_app() -> FastAPI:
 
     app.include_router(health.router)
     app.include_router(analyze.router)
+    app.include_router(demo.router)
 
-    @app.get("/")
-    async def root():
+    @app.get("/", response_class=HTMLResponse, include_in_schema=False)
+    async def ui():
+        return HTMLResponse(_UI_PATH.read_text(encoding="utf-8"))
+
+    @app.get("/v1/info", include_in_schema=False)
+    async def info():
         return {"service": "factory-health-agent", "docs": "/docs", "health": "/v1/health"}
 
     return app

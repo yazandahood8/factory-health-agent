@@ -14,7 +14,8 @@ from starlette.responses import JSONResponse
 
 from sdk.config import get_settings
 
-OPEN_PATHS = {"/v1/health", "/docs", "/openapi.json", "/redoc", "/"}
+# Note: /v1/demo-token is intentionally absent so it stays IP-rate-limited.
+OPEN_PATHS = {"/v1/health", "/v1/info", "/docs", "/openapi.json", "/redoc", "/"}
 
 
 class _InMemoryWindow:

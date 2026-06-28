@@ -11,6 +11,9 @@ LangGraph and gated by production guardrails.
 > MongoDB, Redis, ChromaDB, LangSmith — has an in-memory / mock fallback. Clone,
 > install, run. Add credentials to upgrade each component to the real thing.
 
+**▶ Live demo: https://factory-health-agent.onrender.com** — pick a machine, set
+sensor readings, and watch the multi-agent pipeline diagnose it live (powered by Gemini).
+
 [![CI](https://github.com/yazandahood8/factory-health-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/yazandahood8/factory-health-agent/actions)
 ![python](https://img.shields.io/badge/python-3.10%2B-blue)
 
@@ -110,14 +113,28 @@ call is traced; `run_eval` also uploads the eval dataset.
 
 ---
 
+## Web UI
+
+A self-contained dashboard is served at `/` (one `api/static/index.html`, no
+build step, same-origin — so it deploys unchanged via the Dockerfile). It loads a
+machine catalog, offers Healthy/Warning/Critical sensor presets, and streams the
+live pipeline trace before rendering severity → diagnosis → action plan.
+
+So the public demo works without credentials, an open **`GET /v1/demo-token`**
+endpoint issues a short-lived, budget-capped, IP-rate-limited JWT that the UI uses
+automatically. It *exercises* the real auth system rather than bypassing it —
+every other `/v1` endpoint stays locked.
+
 ## API
 
 | Method | Path                  | Description                          |
 |--------|-----------------------|--------------------------------------|
 | POST   | `/v1/analyze`         | Full agent pipeline                  |
 | POST   | `/v1/analyze/stream`  | Same, streamed via SSE               |
+| GET    | `/v1/machines`        | Tenant machine catalog (authed)      |
+| GET    | `/v1/demo-token`      | Short-lived demo JWT (open)          |
 | GET    | `/v1/health`          | Component health (open)              |
-| GET    | `/v1/metrics`         | Per-tenant spend / budget            |
+| GET    | `/v1/metrics`         | Per-tenant spend / latency / errors  |
 
 All `/v1` data endpoints require `Authorization: Bearer <jwt>`. Mint a dev token:
 

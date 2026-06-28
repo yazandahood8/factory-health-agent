@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Factory Health Agent</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%AD%3C/text%3E%3C/svg%3E" />
+<style>
+  :root {
+    --bg: #0b0f17; --panel: #131a26; --panel2: #0f1622; --line: #232f42;
+    --txt: #e6edf6; --muted: #8597ad; --accent: #4f9cff; --accent2: #2b6fd6;
+    --green: #2ecc71; --amber: #f1c40f; --red: #ff5757;
+    --radius: 14px; --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: radial-gradient(1200px 600px at 80% -10%, #16243b 0%, var(--bg) 55%);
+    color: var(--txt); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    min-height: 100vh;
+  }
+  header {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 18px 28px; border-bottom: 1px solid var(--line);
+    background: rgba(11,15,23,.7); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 5;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand .logo { font-size: 26px; }
+  .brand h1 { font-size: 17px; margin: 0; letter-spacing: .2px; }
+  .brand p { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+  .head-right { display: flex; align-items: center; gap: 14px; }
+  .links a { color: var(--muted); text-decoration: none; font-size: 13px; margin-left: 14px; }
+  .links a:hover { color: var(--accent); }
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 12px;
+    padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel2);
+    color: var(--muted);
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+  .dot.ok { background: var(--green); box-shadow: 0 0 10px var(--green); }
+  .dot.bad { background: var(--red); }
+
+  main { max-width: 1180px; margin: 0 auto; padding: 26px; display: grid;
+    grid-template-columns: 380px 1fr; gap: 22px; align-items: start; }
+  @media (max-width: 920px) { main { grid-template-columns: 1fr; } }
+
+  .card { background: linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%);
+    border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+  .card h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--muted); margin: 0 0 16px; }
+
+  label { display: block; font-size: 12px; color: var(--muted); margin: 14px 0 6px; }
+  select, input[type=number] {
+    width: 100%; background: var(--panel2); border: 1px solid var(--line); color: var(--txt);
+    border-radius: 10px; padding: 11px 12px; font-size: 14px; outline: none;
+  }
+  select:focus, input:focus { border-color: var(--accent2); }
+  .meta { font-size: 12px; color: var(--muted); margin-top: 8px; line-height: 1.6; }
+  .meta b { color: var(--txt); font-weight: 600; }
+
+  .presets { display: flex; gap: 8px; margin-top: 6px; }
+  .presets button {
+    flex: 1; padding: 9px 0; border-radius: 10px; border: 1px solid var(--line);
+    background: var(--panel2); color: var(--muted); font-size: 12px; cursor: pointer; transition: .15s;
+  }
+  .presets button:hover { color: var(--txt); border-color: var(--accent2); }
+  .presets button.active { color: #fff; border-color: transparent; }
+  .presets button[data-k=healthy].active { background: #1d6b40; }
+  .presets button[data-k=warning].active { background: #8a6d11; }
+  .presets button[data-k=critical].active { background: #8c2f2f; }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .run {
+    margin-top: 20px; width: 100%; padding: 14px; border: none; border-radius: 12px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent2) 100%);
+    color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; transition: .15s;
+  }
+  .run:hover { filter: brightness(1.08); }
+  .run:disabled { opacity: .55; cursor: not-allowed; }
+
+  /* results */
+  #results { display: flex; flex-direction: column; gap: 18px; min-height: 200px; }
+  .placeholder { color: var(--muted); font-size: 14px; text-align: center; padding: 60px 20px;
+    border: 1px dashed var(--line); border-radius: var(--radius); }
+
+  .trace { font-family: var(--mono); font-size: 12.5px; }
+  .trace .step { display: flex; align-items: center; gap: 10px; padding: 7px 0;
+    color: var(--muted); opacity: 0; transform: translateX(-6px); animation: slidein .3s forwards; }
+  .trace .step b { color: var(--txt); }
+  @keyframes slidein { to { opacity: 1; transform: none; } }
+  .spinner { width: 14px; height: 14px; border: 2px solid var(--line); border-top-color: var(--accent);
+    border-radius: 50%; animation: spin .7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .sev-head { display: flex; align-items: center; gap: 14px; }
+  .badge { font-weight: 700; font-size: 13px; padding: 6px 14px; border-radius: 999px; letter-spacing: .5px; }
+  .NORMAL, .LOW { background: rgba(46,204,113,.15); color: var(--green); border: 1px solid rgba(46,204,113,.4); }
+  .WARNING, .MEDIUM { background: rgba(241,196,15,.15); color: var(--amber); border: 1px solid rgba(241,196,15,.4); }
+  .CRITICAL, .HIGH { background: rgba(255,87,87,.15); color: var(--red); border: 1px solid rgba(255,87,87,.4); }
+
+  .kv { font-size: 13px; color: var(--muted); margin: 4px 0; }
+  .kv b { color: var(--txt); }
+  .conf-bar { height: 8px; background: var(--panel2); border-radius: 999px; overflow: hidden; margin: 8px 0 2px; }
+  .conf-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  ul.actions { margin: 8px 0 0; padding-left: 18px; }
+  ul.actions li { margin: 7px 0; font-size: 13.5px; line-height: 1.5; }
+  ul.actions li:first-child.crit { color: var(--red); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .chip { font-size: 11.5px; color: var(--muted); background: var(--panel2);
+    border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; font-family: var(--mono); }
+  .escalate { border: 1px solid rgba(255,87,87,.5); background: rgba(255,87,87,.08);
+    border-radius: 12px; padding: 14px 16px; color: #ffd0d0; font-size: 13.5px; }
+  .footer-meta { display: flex; flex-wrap: wrap; gap: 16px; font-family: var(--mono);
+    font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 12px; }
+  .narr { font-size: 13px; color: var(--txt); line-height: 1.6; margin-top: 6px;
+    background: var(--panel2); border-left: 2px solid var(--accent2); padding: 10px 12px; border-radius: 0 8px 8px 0; }
+  .err { color: var(--red); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">🏭</span>
+    <div>
+      <h1>Factory Health Agent</h1>
+      <p>GenAI infrastructure for industrial machine diagnostics</p>
+    </div>
+  </div>
+  <div class="head-right">
+    <span class="pill" id="status"><span class="dot" id="statusDot"></span><span id="statusText">connecting…</span></span>
+    <span class="links">
+      <a href="/docs" target="_blank">API docs</a>
+      <a href="https://github.com/yazandahood8/factory-health-agent" target="_blank">GitHub</a>
+    </span>
+  </div>
+</header>
+
+<main>
+  <!-- Controls -->
+  <section class="card">
+    <h2>Machine &amp; Sensors</h2>
+    <label for="machine">Machine</label>
+    <select id="machine"></select>
+    <div class="meta" id="machineMeta"></div>
+
+    <label>Scenario presets</label>
+    <div class="presets">
+      <button data-k="healthy">Healthy</button>
+      <button data-k="warning">Warning</button>
+      <button data-k="critical">Critical</button>
+    </div>
+
+    <div class="grid2">
+      <div>
+        <label for="vib">Vibration (mm/s)</label>
+        <input type="number" id="vib" step="0.1" min="0" />
+      </div>
+      <div>
+        <label for="temp">Temperature (°C)</label>
+        <input type="number" id="temp" step="1" />
+      </div>
+      <div>
+        <label for="pressure">Pressure (bar)</label>
+        <input type="number" id="pressure" step="0.1" min="0" />
+      </div>
+      <div>
+        <label for="rpm">RPM</label>
+        <input type="number" id="rpm" step="10" min="0" />
+      </div>
+    </div>
+
+    <button class="run" id="run">Run Analysis</button>
+  </section>
+
+  <!-- Results -->
+  <section class="card">
+    <h2>Pipeline &amp; Diagnosis</h2>
+    <div id="results">
+      <div class="placeholder">Pick a machine, choose a scenario, and run an analysis to watch the
+        multi-agent pipeline diagnose it live.</div>
+    </div>
+  </section>
+</main>
+
+<script>
+const ISO_ZONES = { "Class I":[1.4,2.8], "Class II":[2.8,4.5], "Class III":[4.5,7.1], "Class IV":[7.1,11.0] };
+let TOKEN = null, MACHINES = [], current = null, activePreset = "critical";
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+async function getToken() {
+  const r = await fetch("/v1/demo-token");
+  if (!r.ok) throw new Error("demo-token failed");
+  TOKEN = (await r.json()).token;
+}
+
+async function authed(url, opts = {}) {
+  opts.headers = Object.assign({ "Authorization": "Bearer " + TOKEN }, opts.headers || {});
+  let r = await fetch(url, opts);
+  if (r.status === 401) { await getToken(); // token expired -> refresh once
+    opts.headers["Authorization"] = "Bearer " + TOKEN; r = await fetch(url, opts); }
+  return r;
+}
+
+async function loadStatus() {
+  try {
+    const h = await (await fetch("/v1/health")).json();
+    $("statusDot").className = "dot ok";
+    $("statusText").textContent = "LLM: " + h.components.llm_primary + " · " + h.status;
+  } catch { $("statusDot").className = "dot bad"; $("statusText").textContent = "offline"; }
+}
+
+async function loadMachines() {
+  const r = await authed("/v1/machines");
+  MACHINES = await r.json();
+  const sel = $("machine");
+  sel.innerHTML = MACHINES.map(m => `<option value="${m.machine_id}">${m.machine_id} — ${m.machine_type.replace(/_/g,' ')}</option>`).join("");
+  sel.onchange = () => { current = MACHINES.find(m => m.machine_id === sel.value); renderMeta(); applyPreset(activePreset); };
+  current = MACHINES[0]; renderMeta(); applyPreset("critical");
+}
+
+function renderMeta() {
+  if (!current) return;
+  const nr = current.normal_ranges || {};
+  const vr = nr.vibration_mm_s || [], tr = nr.temperature_c || [];
+  $("machineMeta").innerHTML =
+    `<b>${esc(current.manufacturer)} ${esc(current.model)}</b> · ${esc(current.iso_class)}<br>` +
+    `Normal vibration <b>${vr[0]}–${vr[1]} mm/s</b> · temp <b>${tr[0]}–${tr[1]} °C</b>`;
+}
+
+function applyPreset(kind) {
+  activePreset = kind;
+  document.querySelectorAll(".presets button").forEach(b => b.classList.toggle("active", b.dataset.k === kind));
+  if (!current) return;
+  const nr = current.normal_ranges || {};
+  const vr = nr.vibration_mm_s || [0, 2.8], tr = nr.temperature_c || [40, 75];
+  const pr = nr.pressure_bar || [0, 0], rr = nr.rpm || [1000, 1000];
+  const [zoneB, zoneC] = ISO_ZONES[current.iso_class] || [2.8, 4.5];
+  let vib, temp;
+  if (kind === "healthy") { vib = vr[0] + 0.4 * (vr[1] - vr[0]); temp = tr[0] + 0.4 * (tr[1] - tr[0]); }
+  else if (kind === "warning") { vib = (zoneB + zoneC) / 2; temp = tr[1] - 2; }
+  else { vib = zoneC + 0.5 * zoneC; temp = tr[1] + 18; }
+  $("vib").value = Math.round(vib * 10) / 10;
+  $("temp").value = Math.round(temp);
+  $("pressure").value = Math.round(((pr[0] + pr[1]) / 2) * 10) / 10;
+  $("rpm").value = Math.round((rr[0] + rr[1]) / 2);
+}
+
+document.querySelectorAll(".presets button").forEach(b => b.onclick = () => applyPreset(b.dataset.k));
+
+async function run() {
+  if (!current) return;
+  const btn = $("run"); btn.disabled = true; btn.textContent = "Analyzing…";
+  const res = $("results");
+  res.innerHTML = `<div class="trace" id="trace"></div>`;
+  const trace = $("trace");
+  const t0 = performance.now();
+
+  const body = JSON.stringify({
+    machine_id: current.machine_id,
+    sensor_data: {
+      vibration_mm_s: parseFloat($("vib").value),
+      temperature_c: parseFloat($("temp").value),
+      pressure_bar: parseFloat($("pressure").value),
+      rpm: parseInt($("rpm").value, 10),
+    },
+  });
+
+  try {
+    const r = await authed("/v1/analyze/stream", {
+      method: "POST", headers: { "Content-Type": "application/json", "X-Tenant-ID": "acme" }, body,
+    });
+    if (!r.ok) throw new Error("HTTP " + r.status + " — " + (await r.text()));
+
+    const reader = r.body.getReader(); const dec = new TextDecoder(); let buf = "";
+    while (true) {
+      const { value, done } = await reader.read(); if (done) break;
+      buf += dec.decode(value, { stream: true });
+      const events = buf.split("\n\n"); buf = events.pop();
+      for (const ev of events) {
+        const type = (ev.match(/event:\s*(.*)/) || [])[1];
+        const dataLine = (ev.match(/data:\s*([\s\S]*)/) || [])[1];
+        if (!dataLine) continue;
+        const data = JSON.parse(dataLine);
+        if (type === "step") addStep(trace, data.message);
+        else if (type === "result") renderResult(res, data, Math.round(performance.now() - t0));
+        else if (type === "error") res.innerHTML = `<div class="err">⚠ ${esc(data.detail)}</div>`;
+      }
+    }
+  } catch (e) {
+    res.innerHTML = `<div class="err">⚠ ${esc(e.message)}</div>`;
+  } finally {
+    btn.disabled = false; btn.textContent = "Run Analysis";
+  }
+}
+
+function addStep(trace, msg) {
+  const d = document.createElement("div");
+  d.className = "step";
+  d.innerHTML = `<span class="dot ok"></span><b>${esc(msg.split(":")[0])}</b> ${esc(msg.split(":").slice(1).join(":"))}`;
+  trace.appendChild(d);
+}
+
+function bar(conf) {
+  return `<div class="conf-bar"><div class="conf-fill" style="width:${Math.round((conf||0)*100)}%"></div></div>
+          <div class="kv">confidence <b>${((conf||0)*100).toFixed(0)}%</b></div>`;
+}
+
+function renderResult(res, d, latency) {
+  const ar = d.anomaly_report || {}, dg = d.diagnosis, ap = d.action_plan, vr = d.validated_response;
+  let html = "";
+
+  html += `<div class="sev-head"><span class="badge ${esc(d.severity)}">${esc(d.severity)}</span>
+    <span class="kv">${esc(ar.anomaly_type || "")}</span></div>`;
+  if (ar.details) html += `<div class="narr">${esc(ar.details)}</div>`;
+  if (ar.citations && ar.citations.length)
+    html += `<div class="chips">${ar.citations.map(c => `<span class="chip">${esc(c)}</span>`).join("")}</div>`;
+
+  if (dg) {
+    html += `<div style="margin-top:6px"><div class="kv"><b>Root cause:</b> ${esc(dg.root_cause)}</div>
+      ${bar(dg.confidence)}
+      <div class="kv">Remaining useful life ≈ <b>${esc(dg.rul_days)} days</b></div>`;
+    if (dg.evidence && dg.evidence.length)
+      html += `<div class="chips">${dg.evidence.map(e => `<span class="chip">${esc(e)}</span>`).join("")}</div>`;
+    html += `</div>`;
+  }
+
+  if (ap) {
+    html += `<div style="margin-top:6px"><div class="sev-head"><span class="badge ${esc(ap.urgency)}">${esc(ap.urgency)}</span>
+      <span class="kv">downtime ≈ <b>${esc(ap.estimated_downtime_hours)} h</b></span></div>
+      <ul class="actions">${(ap.actions||[]).map((a,i) =>
+        `<li class="${i===0 && ap.urgency==='CRITICAL' ? 'crit' : ''}">${esc(a)}</li>`).join("")}</ul>`;
+    if (ap.parts_needed && ap.parts_needed.length)
+      html += `<div class="chips">${ap.parts_needed.map(p => `<span class="chip">🔧 ${esc(p)}</span>`).join("")}</div>`;
+    html += `</div>`;
+  }
+
+  if (d.escalated)
+    html += `<div class="escalate">🚨 Escalated to a human expert${vr && vr.reason ? " — " + esc(vr.reason) : "" }.
+      The system withheld an automated recommendation because confidence/groundedness was too low.</div>`;
+
+  html += `<div class="footer-meta">
+    <span>trace ${esc((d.trace_id||"").slice(0,8))}</span>
+    <span>${esc(d.total_tokens)} tokens</span>
+    <span>$${Number(d.total_cost_usd||0).toFixed(5)}</span>
+    <span>${latency} ms</span>
+    ${vr && vr.groundedness != null ? `<span>groundedness ${(vr.groundedness*100).toFixed(0)}%</span>` : ""}
+  </div>`;
+
+  res.innerHTML = html;
+}
+
+$("run").onclick = run;
+
+(async function init() {
+  await loadStatus();
+  try { await getToken(); await loadMachines(); }
+  catch (e) { $("results").innerHTML = `<div class="err">⚠ Failed to initialize: ${esc(e.message)}</div>`; }
+})();
+</script>
+</body>
+</html>
