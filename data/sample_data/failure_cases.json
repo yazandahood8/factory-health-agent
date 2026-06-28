@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "fc_001",
+    "machine_type": "centrifugal_pump",
+    "symptoms": "High vibration at 1x RPM, elevated bearing temperature, axial movement",
+    "root_cause": "Bearing outer race defect",
+    "resolution": "Replace drive-end bearing, re-grease, check alignment",
+    "downtime_hours": 6,
+    "parts": ["bearing 6312-C3", "grease NLGI 2"]
+  },
+  {
+    "case_id": "fc_002",
+    "machine_type": "centrifugal_pump",
+    "symptoms": "Broadband vibration, cavitation noise, fluctuating discharge pressure",
+    "root_cause": "Cavitation due to low suction pressure",
+    "resolution": "Restore NPSH, clean suction strainer, check valve position",
+    "downtime_hours": 3,
+    "parts": ["suction strainer element"]
+  },
+  {
+    "case_id": "fc_003",
+    "machine_type": "induction_motor",
+    "symptoms": "Vibration at 2x line frequency, uneven air gap, overheating",
+    "root_cause": "Stator winding insulation degradation",
+    "resolution": "Rewind stator, megger test, improve cooling airflow",
+    "downtime_hours": 24,
+    "parts": ["stator winding kit", "insulation varnish"]
+  },
+  {
+    "case_id": "fc_004",
+    "machine_type": "induction_motor",
+    "symptoms": "High vibration at running speed, soft foot detected",
+    "root_cause": "Mechanical unbalance / loose foundation bolts",
+    "resolution": "Balance rotor, torque foundation bolts, shim soft foot",
+    "downtime_hours": 4,
+    "parts": ["foundation shims"]
+  },
+  {
+    "case_id": "fc_005",
+    "machine_type": "screw_compressor",
+    "symptoms": "Rising discharge temperature, vibration increase, oil carryover",
+    "root_cause": "Oil separator element clogged",
+    "resolution": "Replace separator element, change oil and filters",
+    "downtime_hours": 5,
+    "parts": ["separator element", "compressor oil 20L", "oil filter"]
+  },
+  {
+    "case_id": "fc_006",
+    "machine_type": "screw_compressor",
+    "symptoms": "Knocking noise, high vibration at bearing frequency, metal in oil",
+    "root_cause": "Rotor bearing wear",
+    "resolution": "Overhaul airend, replace rotor bearings",
+    "downtime_hours": 16,
+    "parts": ["airend bearing set"]
+  },
+  {
+    "case_id": "fc_007",
+    "machine_type": "industrial_fan",
+    "symptoms": "1x RPM vibration, dust accumulation on blades",
+    "root_cause": "Aerodynamic unbalance from fouling",
+    "resolution": "Clean impeller, re-balance, inspect blade erosion",
+    "downtime_hours": 2,
+    "parts": []
+  },
+  {
+    "case_id": "fc_008",
+    "machine_type": "industrial_gearbox",
+    "symptoms": "Gear mesh frequency sidebands, temperature rise, audible whine",
+    "root_cause": "Gear tooth wear / pitting",
+    "resolution": "Inspect gear set, replace worn gears, change lubricant",
+    "downtime_hours": 20,
+    "parts": ["gear set", "EP gear oil 40L"]
+  },
+  {
+    "case_id": "fc_009",
+    "machine_type": "industrial_gearbox",
+    "symptoms": "High vibration at bearing defect frequencies, oil contamination",
+    "root_cause": "Input shaft bearing spalling",
+    "resolution": "Replace input bearing, flush housing, refill lubricant",
+    "downtime_hours": 12,
+    "parts": ["input bearing 22312", "EP gear oil 40L"]
+  },
+  {
+    "case_id": "fc_010",
+    "machine_type": "centrifugal_pump",
+    "symptoms": "Vibration at vane pass frequency, pressure pulsation",
+    "root_cause": "Impeller wear ring clearance excessive",
+    "resolution": "Replace wear rings, restore clearance to spec",
+    "downtime_hours": 8,
+    "parts": ["wear ring set"]
+  }
+]

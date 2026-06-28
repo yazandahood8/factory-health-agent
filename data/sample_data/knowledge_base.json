@@ -1,0 +1,100 @@
+{
+  "vibration_standards": [
+    {
+      "source": "ISO 10816-3:2009 §A",
+      "text": "ISO 10816-3 evaluates machine vibration by measuring RMS velocity (mm/s) on bearing housings. For medium machines 15 kW to 300 kW (Class II), zone boundaries are: Zone A (good) up to 1.4 mm/s, Zone B (acceptable, unrestricted operation) 1.4-2.8 mm/s, Zone C (unsatisfactory, restricted operation) 2.8-4.5 mm/s, Zone D (unacceptable, damage may occur) above 4.5 mm/s."
+    },
+    {
+      "source": "ISO 10816-3:2009 §B",
+      "text": "For large machines 300 kW to 50 MW on rigid foundations (Class III) and flexible foundations (Class IV), the unsatisfactory threshold rises. Class III: Zone B up to 4.5 mm/s, Zone C up to 7.1 mm/s, Zone D above 7.1 mm/s. Class IV: Zone B up to 7.1 mm/s, Zone C up to 11.0 mm/s, Zone D above 11.0 mm/s."
+    },
+    {
+      "source": "ISO 10816-1 general",
+      "text": "A sustained increase of 25% or more in RMS vibration velocity from an established baseline indicates a developing fault even when absolute values remain within the acceptable zone. Trend monitoring is recommended alongside absolute limits."
+    },
+    {
+      "source": "Vibration diagnostics primer",
+      "text": "Vibration concentrated at 1x running speed typically indicates unbalance. Vibration at 2x line frequency in motors suggests electrical faults or stator issues. Bearing defects produce high-frequency vibration at characteristic defect frequencies (BPFO, BPFI). Gear faults appear at gear-mesh frequency with sidebands."
+    }
+  ],
+  "manuals": [
+    {
+      "source": "Grundfos CR pump manual §6 Bearings",
+      "machine_type": "centrifugal_pump",
+      "text": "Centrifugal pump drive-end bearings should run below 75 C. Bearing temperature rise combined with vibration at 1x RPM and axial play indicates outer race wear. Replace bearings as a set and verify shaft alignment within 0.05 mm before restart."
+    },
+    {
+      "source": "Grundfos CR pump manual §8 Cavitation",
+      "machine_type": "centrifugal_pump",
+      "text": "Cavitation presents as broadband random vibration and a gravel-like noise with fluctuating discharge pressure. Restore net positive suction head (NPSH) by clearing suction strainers and verifying suction valve is fully open. Prolonged cavitation erodes the impeller."
+    },
+    {
+      "source": "ABB motor manual §5 Insulation",
+      "machine_type": "induction_motor",
+      "text": "Induction motor stator winding temperature must stay below 85 C for Class B insulation. Vibration at twice line frequency with overheating suggests winding insulation degradation. Perform megger and surge tests; rewind if insulation resistance falls below 1 MOhm/kV."
+    },
+    {
+      "source": "Atlas Copco GA compressor manual §4 Oil system",
+      "machine_type": "screw_compressor",
+      "text": "Rising discharge temperature with oil carryover on a screw compressor points to a clogged oil separator element. Replace the separator element and oil/filters together. Knocking with metal particles in the oil indicates airend rotor bearing wear requiring overhaul."
+    },
+    {
+      "source": "Howden fan manual §3 Balance",
+      "machine_type": "industrial_fan",
+      "text": "Industrial fan vibration at 1x RPM is usually aerodynamic unbalance from dust build-up or blade erosion. Clean the impeller and re-balance to ISO 1940 G2.5. Inspect blades for cracking before returning to service."
+    },
+    {
+      "source": "SEW gearbox manual §7 Gears and bearings",
+      "machine_type": "industrial_gearbox",
+      "text": "Gearbox faults appear at gear-mesh frequency with sidebands; tooth pitting raises vibration and operating temperature. Bearing spalling shows energy at bearing defect frequencies with oil contamination. Replace affected gears or bearings and refill with EP gear oil."
+    }
+  ],
+  "maintenance_procedures": [
+    {
+      "source": "Procedure MP-BRG-01",
+      "fault": "Bearing outer race defect",
+      "text": "Bearing replacement: isolate and lock out machine, remove coupling, extract worn bearing with puller, inspect shaft journal, install new bearing with induction heater, re-grease to NLGI 2, verify alignment, run-in at low load. Estimated downtime 6 hours."
+    },
+    {
+      "source": "Procedure MP-CAV-01",
+      "fault": "Cavitation due to low suction pressure",
+      "text": "Cavitation remediation: clean suction strainer, confirm suction valve fully open, verify tank level and NPSH margin, throttle discharge to restore duty point. Estimated downtime 3 hours."
+    },
+    {
+      "source": "Procedure MP-STA-01",
+      "fault": "Stator winding insulation degradation",
+      "text": "Stator rewind: de-energize and verify zero energy, remove rotor, strip damaged windings, rewind to spec, vacuum-pressure impregnate varnish, megger test, reassemble and improve cooling airflow. Estimated downtime 24 hours."
+    },
+    {
+      "source": "Procedure MP-BAL-01",
+      "fault": "Mechanical unbalance",
+      "text": "Field balancing: mount accelerometers and phase reference, measure 1x amplitude and phase, calculate trial and correction weights, attach correction mass, verify residual unbalance within ISO 1940 G2.5, torque foundation bolts. Estimated downtime 4 hours."
+    },
+    {
+      "source": "Procedure MP-SEP-01",
+      "fault": "Oil separator element clogged",
+      "text": "Separator service: depressurize air receiver, replace oil separator element and O-rings, change compressor oil and oil filter, restart and check for oil carryover. Estimated downtime 5 hours."
+    },
+    {
+      "source": "Procedure MP-GEAR-01",
+      "fault": "Gear tooth wear / pitting",
+      "text": "Gear overhaul: drain lubricant, open inspection cover, assess gear contact pattern, replace worn gear set, check backlash, refill with EP gear oil, run-in under monitored load. Estimated downtime 20 hours."
+    }
+  ],
+  "spare_parts": [
+    {"part": "bearing 6312-C3", "stock": 4, "lead_time_days": 0},
+    {"part": "grease NLGI 2", "stock": 20, "lead_time_days": 0},
+    {"part": "suction strainer element", "stock": 2, "lead_time_days": 1},
+    {"part": "stator winding kit", "stock": 0, "lead_time_days": 14},
+    {"part": "insulation varnish", "stock": 3, "lead_time_days": 2},
+    {"part": "foundation shims", "stock": 50, "lead_time_days": 0},
+    {"part": "separator element", "stock": 1, "lead_time_days": 3},
+    {"part": "compressor oil 20L", "stock": 6, "lead_time_days": 0},
+    {"part": "oil filter", "stock": 8, "lead_time_days": 0},
+    {"part": "airend bearing set", "stock": 0, "lead_time_days": 21},
+    {"part": "gear set", "stock": 0, "lead_time_days": 30},
+    {"part": "EP gear oil 40L", "stock": 4, "lead_time_days": 0},
+    {"part": "input bearing 22312", "stock": 1, "lead_time_days": 7},
+    {"part": "wear ring set", "stock": 2, "lead_time_days": 5}
+  ]
+}

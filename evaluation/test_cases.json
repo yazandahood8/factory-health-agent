@@ -1,0 +1,68 @@
+[
+  {
+    "id": "tc_001",
+    "input": {"machine_id": "pump_001", "sensor_data": {"vibration_mm_s": 6.2, "temperature_c": 95, "rpm": 1460}},
+    "expected_severity": "CRITICAL",
+    "expected_diagnosis": "Bearing outer race defect",
+    "expected_urgency": "CRITICAL",
+    "expected_confidence_min": 0.6
+  },
+  {
+    "id": "tc_002",
+    "input": {"machine_id": "pump_001", "sensor_data": {"vibration_mm_s": 1.4, "temperature_c": 55}},
+    "expected_severity": "NORMAL"
+  },
+  {
+    "id": "tc_003",
+    "input": {"machine_id": "motor_002", "sensor_data": {"vibration_mm_s": 9.5, "temperature_c": 95}},
+    "expected_severity": "CRITICAL",
+    "expected_urgency": "CRITICAL"
+  },
+  {
+    "id": "tc_004",
+    "input": {"machine_id": "motor_002", "sensor_data": {"vibration_mm_s": 5.5, "temperature_c": 70}},
+    "expected_severity": "WARNING"
+  },
+  {
+    "id": "tc_005",
+    "input": {"machine_id": "compressor_003", "sensor_data": {"vibration_mm_s": 8.5, "temperature_c": 112}},
+    "expected_severity": "CRITICAL",
+    "expected_urgency": "CRITICAL"
+  },
+  {
+    "id": "tc_006",
+    "input": {"machine_id": "compressor_003", "sensor_data": {"vibration_mm_s": 2.0, "temperature_c": 80}},
+    "expected_severity": "NORMAL"
+  },
+  {
+    "id": "tc_007",
+    "input": {"machine_id": "fan_004", "sensor_data": {"vibration_mm_s": 3.4, "temperature_c": 50}},
+    "expected_severity": "WARNING"
+  },
+  {
+    "id": "tc_008",
+    "input": {"machine_id": "fan_004", "sensor_data": {"vibration_mm_s": 1.2, "temperature_c": 40}},
+    "expected_severity": "NORMAL"
+  },
+  {
+    "id": "tc_009",
+    "input": {"machine_id": "gearbox_005", "sensor_data": {"vibration_mm_s": 13.5, "temperature_c": 100}},
+    "expected_severity": "CRITICAL",
+    "expected_urgency": "CRITICAL"
+  },
+  {
+    "id": "tc_010",
+    "input": {"machine_id": "gearbox_005", "sensor_data": {"vibration_mm_s": 4.0, "temperature_c": 70}},
+    "expected_severity": "NORMAL"
+  },
+  {
+    "id": "tc_011",
+    "input": {"machine_id": "gearbox_005", "sensor_data": {"vibration_mm_s": 9.0, "temperature_c": 88}},
+    "expected_severity": "WARNING"
+  },
+  {
+    "id": "tc_012",
+    "input": {"machine_id": "compressor_003", "sensor_data": {"vibration_mm_s": 6.0, "temperature_c": 98}},
+    "expected_severity": "WARNING"
+  }
+]

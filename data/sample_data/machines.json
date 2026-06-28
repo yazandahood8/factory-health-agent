@@ -1,0 +1,72 @@
+[
+  {
+    "machine_id": "pump_001",
+    "machine_type": "centrifugal_pump",
+    "manufacturer": "Grundfos",
+    "model": "CR 64",
+    "install_date": "2021-03-15",
+    "iso_class": "Class II",
+    "normal_ranges": {
+      "vibration_mm_s": [0.0, 2.8],
+      "temperature_c": [40, 75],
+      "pressure_bar": [4.0, 8.0],
+      "rpm": [1450, 1480]
+    }
+  },
+  {
+    "machine_id": "motor_002",
+    "machine_type": "induction_motor",
+    "manufacturer": "ABB",
+    "model": "M3BP 280",
+    "install_date": "2020-07-01",
+    "iso_class": "Class III",
+    "normal_ranges": {
+      "vibration_mm_s": [0.0, 4.5],
+      "temperature_c": [45, 85],
+      "pressure_bar": [0.0, 0.0],
+      "rpm": [2960, 2985]
+    }
+  },
+  {
+    "machine_id": "compressor_003",
+    "machine_type": "screw_compressor",
+    "manufacturer": "Atlas Copco",
+    "model": "GA 90",
+    "install_date": "2019-11-20",
+    "iso_class": "Class III",
+    "normal_ranges": {
+      "vibration_mm_s": [0.0, 4.5],
+      "temperature_c": [60, 95],
+      "pressure_bar": [6.0, 10.0],
+      "rpm": [2950, 3000]
+    }
+  },
+  {
+    "machine_id": "fan_004",
+    "machine_type": "industrial_fan",
+    "manufacturer": "Howden",
+    "model": "AXICO",
+    "install_date": "2022-01-10",
+    "iso_class": "Class II",
+    "normal_ranges": {
+      "vibration_mm_s": [0.0, 2.8],
+      "temperature_c": [30, 65],
+      "pressure_bar": [0.0, 1.0],
+      "rpm": [980, 1010]
+    }
+  },
+  {
+    "machine_id": "gearbox_005",
+    "machine_type": "industrial_gearbox",
+    "manufacturer": "SEW-Eurodrive",
+    "model": "X3KS",
+    "install_date": "2018-05-30",
+    "iso_class": "Class IV",
+    "normal_ranges": {
+      "vibration_mm_s": [0.0, 7.1],
+      "temperature_c": [50, 90],
+      "pressure_bar": [0.0, 0.0],
+      "rpm": [580, 600]
+    }
+  }
+]
